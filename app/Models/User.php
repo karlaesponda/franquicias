@@ -42,4 +42,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    //Relacion de usuario-franqucias de uno a muchos
+    public function franquicias(){
+        return $this->hasMany(Franquicia::class);       
+    }
+
+    //Relacion de usuario-comment uno a muchos
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
+    
 }
