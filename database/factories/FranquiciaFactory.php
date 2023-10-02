@@ -1,0 +1,47 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Franquicia>
+ */
+class FranquiciaFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        $title = $this->faker->unique()->realText(55);
+        return [
+            'nombre_restaurante' => $this->faker->company,
+            'razon_social' => $this->faker->company,
+            'rfc' => $this->faker->regexify('[A-Z]{4}\d{6}[A-Z0-9]{3}'),
+            'anios_operacion' => $this->faker->numberBetween(1, 50),
+            'num_sucursales' => $this->faker->numberBetween(1, 100),
+            'marca_registrada' => $this->faker->boolean,
+            'costo_marca' => $this->faker->randomFloat(2, 1000, 100000),
+            'logotipo' => 'franquicias/'.$this->faker->image('public/storage/franquicias', 640, 480, null, false),
+            'tipo_restaurante' => $this->faker->word,
+            'website' => $this->faker->url,
+            'facebook' => $this->faker->url,
+            'instagram' => $this->faker->url,
+            'descripcion' => $this->faker->sentence,
+            'historia' => $this->faker->paragraph,
+            'mision' => $this->faker->text(150),
+            'vision' => $this->faker->text(150),
+            'estandar_calidad' => $this->faker->paragraph,
+            'mercado_meta' => $this->faker->paragraph,
+            'menu' => $this->faker->word,
+            'inf_financiera' => $this->faker->word,
+            'soporte' => $this->faker->paragraph,
+            'entrenamiento' => $this->faker->paragraph,
+            'user_id' => User::all()->random()->id,
+        ];
+    }
+}
