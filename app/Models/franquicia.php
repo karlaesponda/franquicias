@@ -20,5 +20,10 @@ class Franquicia extends Model
         return $this->hasMany(Comment::class);
     }
 
+    //Utilozar slug en lugar de id
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
 }

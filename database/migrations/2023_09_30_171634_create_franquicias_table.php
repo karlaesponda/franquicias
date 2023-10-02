@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('franquicias', function (Blueprint $table) {
             $table->id();
+            $table->string('title', 255);
             $table->string('nombre_restaurante');
+            $table->string('slug', 255)->unique();
             $table->string('razon_social');
             $table->string('rfc');
             $table->string('anios_operacion');

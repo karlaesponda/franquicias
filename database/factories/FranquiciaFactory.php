@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,6 +20,8 @@ class FranquiciaFactory extends Factory
     {
         $title = $this->faker->unique()->realText(55);
         return [
+            'title' => $title,
+            'slug' => Str::slug($title), 
             'nombre_restaurante' => $this->faker->company,
             'razon_social' => $this->faker->company,
             'rfc' => $this->faker->regexify('[A-Z]{4}\d{6}[A-Z0-9]{3}'),
