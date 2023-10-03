@@ -116,6 +116,10 @@ class FranquiciaController extends Controller
             'entrenamiento' => $request->entrenamiento,
             'user_id' => Auth::user()->id,
         ]);
+
+        return redirect()->action([FranquiciaController::class, 'index'])
+                            ->with('success-update', 'Franquicia modificada con éxito');
+
     }
 
     /**
@@ -123,7 +127,17 @@ class FranquiciaController extends Controller
      */
     public function destroy(Franquicia $franquicia)
     {
-        //
+        //Eliminar el logotipo de la carpeta
+        if($franquicia->logotipo){
+            File::delete(public_path('storage/' . $franquicia->logotipo));
+        }
         
+
+        //Eliminar franquicia
+        $franquicia->delete();
+
+        return redirect()->action([FranquiciaController::class, 'index'], compact('franquicia'))
+        ->with('success-delete', 'Franquicia eliminada con éxito');
+
     }
 }
