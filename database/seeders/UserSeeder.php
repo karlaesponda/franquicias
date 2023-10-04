@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'full_name' => 'Karla Esponda',
+            'name' => 'Karla Esponda',
             'username' => 'Karlaesponda',
             'email' => 'kalejandra.kaec@hotmail.com',
             'password' => Hash::make('12345'), // Cambia 'password' por la contraseña que desees para los usuarios de prueba
@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-            'full_name' => 'Blair Waldorf',
+            'name' => 'Blair Waldorf',
             'username' => 'queenB',
             'email' => 'waldorf.com',
             'password' => Hash::make('12345'), // Cambia 'password' por la contraseña que desees para los usuarios de prueba

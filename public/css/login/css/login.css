@@ -64,7 +64,7 @@ input[type="password"] {
 }
 
 .button:hover{
-    background: #2979FF;
+    background: #fa7164;
 }
 
 p{
@@ -74,7 +74,7 @@ p{
 
 .link{
     text-decoration: none;
-    color: #1D448E;
+    color: #fb5849;
     font-weight: 500;
 }
 

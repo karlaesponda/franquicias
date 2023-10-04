@@ -12,7 +12,7 @@
 
             <div class="input-content">
                 <label for="name">Nombre completo:</label>
-                <input type="text" name="full_name" placeholder="Escribe tu nombre completo"
+                <input type="text" name="name" placeholder="Escribe tu nombre completo"
                     value="" autofocus>
 
                 <span class="text-danger">

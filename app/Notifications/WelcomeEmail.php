@@ -38,7 +38,7 @@ class WelcomeEmail extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->greeting('Hola, '. $this->user->full_name)
+                    ->greeting('Hola, '. $this->user->name)
                     ->line('Nos complace darle la bienvenida y desearle mucho éxito
                     al emprender su negocio.')
                     ->action('Ir a la plataforma', url('/'))

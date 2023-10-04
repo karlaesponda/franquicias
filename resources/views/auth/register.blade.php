@@ -13,11 +13,10 @@
     <h2>Crear cuenta</h2>
     <div class="content-login">
         <div class="input-content">
-            <input type="text" name="full_name" placeholder="Nombre completo"
-                value="{{old('full_name')}}" 
-                autofocus>
+            <input type="text" name="name" placeholder="Nombre completo"
+                value="{{old('name')}}" autofocus>
 
-            @error('full_name')
+            @error('name')
             <span class="alert-red">
                 <span>*{{$message}}</span>
             </span> 

@@ -20,7 +20,7 @@
             <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" 
                data-bs-toggle="dropdown" aria-expanded="false">
           
-                <span class="name-user">{{Auth::user()->full_name}}</span>
+                <span class="name-user">{{Auth::user()->name}}</span>
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">

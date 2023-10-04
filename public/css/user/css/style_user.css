@@ -82,7 +82,7 @@
 .form-content .form-general .change-password {
     display: block;
     border: 1px solid gray;
-    color: #1d448e;
+    color: #fb5849;
     padding: 4%;
     width: 100%;
 }
@@ -100,7 +100,7 @@
     font-size: 1.2em !important;
     justify-content: center;
     color: #FFF;
-    background: #1d448e;
+    background: #fb5849;
     margin-left: 5px;
     margin-bottom: 30px;
     border: none;

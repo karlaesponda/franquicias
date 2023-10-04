@@ -21,7 +21,7 @@ class CommentController extends Controller
                     ->join('franquicias', 'comments.franquicias_id', '=', 'franquicias.id')
                     ->join('users', 'comments.user_id', '=', 'users.id')
                     ->select('comments.value', 'comments.description',
-                    'franquicias.title', 'users.full_name')
+                    'franquicias.title', 'users.name')
                     ->where('franquicias.user_id', '=', Auth::user()->id)
                     ->orderBy('franquicias.id', 'desc')
                     ->get();
