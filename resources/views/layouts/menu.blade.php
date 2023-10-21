@@ -1,21 +1,53 @@
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="home.html" class="logo">
+                    <img src="{{ asset('img/dauroweb-logo.png') }}" alt="Mi Foto">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href= "{{ route('home.index')}}" class="active">Inicio</a></li>
+                        <li class="scroll-to-section"><a href="#about">Sobre nosotros</a></li>
+                        <li class="scroll-to-section"><a href= "{{ route('franquicias.lista')}}" class="active">Franquicias</a></li>
+                        <li class="scroll-to-section"><a href="#chefs">Reseñas</a></li>
+                        <li class="scroll-to-section"><a href="#reservation">Registrate</a></li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+
+
+<!--
 <header class="header">
     <div class="menu">
 
         <div class="logo">
-            <!--Logo-->
+            
             <a href="#"><img src="" alt="Logo"></a>
         </div>
 
+        // si el usuario no está autenticado
         @guest
-            
-        
         <ul class="d-flex">
             <li class="me-2"><a href="{{route('login')}}" class="login">Acceder</a></li>
             <br>
             <li><a href="{{route('register')}}" class="create">Crear cuenta</a></li>
         </ul>
-
         @else
+
         <div class="dropdown">
             <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" 
                data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,7 +62,8 @@
                 <li><a class="dropdown-item" href="#">Ir al admin</a></li>
                 
                 <li>
-                    <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
+                    <form id="logout-form" action="{{route('logout')}}" method="POST" 
+                    style="display: none;">
                     
                     @csrf
                     </form>
@@ -44,3 +77,4 @@
     </div>
 
 </header>
+-->

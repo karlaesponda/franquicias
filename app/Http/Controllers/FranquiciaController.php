@@ -62,7 +62,7 @@ class FranquiciaController extends Controller
     {
         //
         $comments = $franquicia->comments()->simplePaginate(5);
-        return view('suscriber.franquicias.show', compact('franquicia', 'comments'));
+        return view('subscriber.franquicias.show', compact('franquicia', 'comments'));
     }
 
     /**
@@ -140,4 +140,14 @@ class FranquiciaController extends Controller
         ->with('success-delete', 'Franquicia eliminada con éxito');
 
     }
+
+    public function lista()
+    {
+        // Obtén todas las franquicias paginadas en grupos de 10 por página
+        $franquicias = Franquicia::paginate(10);
+
+        // Devuelve la vista 'lista.blade.php' con los datos de las franquicias
+        return view('subscriber.franquicias.lista', ['franquicias' => $franquicias]);        // Lógica para mostrar una lista de franquicias
+    }
+    
 }

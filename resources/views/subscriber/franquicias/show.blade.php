@@ -1,0 +1,568 @@
+@extends('layouts.base')
+@extends('layouts.menu')
+
+@section('content')
+
+<div class="container-fluid">
+        <div class="row">
+            <!-- Leftside bar -->
+            <div id="tm-sidebar" class="tm-sidebar"> 
+                <nav class="tm-nav">
+                    <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div>
+                        <div class="tm-brand-box">
+                            <h1 class="tm-brand">Mítica</h1>
+                        </div>                
+                        <ul id="tm-main-nav">
+                            <li class="nav-item">                                
+                                <a href="#home" class="nav-link current">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-home nav-icon"></i>
+                                    Sobre nosotros
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#modelo" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-briefcase nav-icon"></i>
+                                    Modelo de negocio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#about" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-money-bill nav-icon"></i>
+                                    Información
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#soporte" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-clipboard nav-icon"></i>
+                                    Soporte y entrenamiento
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#resenas" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-money-bill nav-icon"></i>
+                                    Reseñas
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contact" class="nav-link">
+                                    <div class="triangle-right"></div>
+                                    <i class="fas fa-envelope nav-icon"></i>
+                                    Contacto
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="mb-3 tm-mt-100">
+                        Design: <a href="https://templatemo.com" target="_parent" rel="sponsored">TemplateMo</a>
+                    </footer>
+                </nav>
+            </div>
+            
+            <div class="tm-main">
+                <!-- Home section -->
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-01.jpg"></div>                   
+                    <section id="home" class="tm-section">
+                        <h2 class="tm-text-primary">Mítica</h2>
+                        <hr class="mb-5">
+                        <div class="row">
+                        <p>
+                        Mítica es un concepto de hamburguesería fast-casual que nace en el 2020 pero con muchos años atrás de prueba y error para poder conseguir nuestro gran sabor.
+                        Estamos inspirados en el verdadero amor por los hamburguesas.  
+                        </p>
+                        <p>
+                        El menú es un equilibrio entre lo clásico y la innovación, que atrae tanto a los 
+                        principiantes como a los amantes de la comida, a través de un toque, que abarca 
+                        nuestro ingrediente clave, la carne.
+                        </p>
+                        <h4>
+                        Historia
+                        </h4>
+                        <p>
+                        El menú es un equilibrio entre lo clásico y la innovación, que atrae tanto a los 
+                        principiantes como a los amantes de la comida, a través de un toque, que abarca 
+                        nuestro ingrediente clave, la carne.
+                        </p>
+                        <h4>
+                        Misión
+                        </h4>
+                        <p>
+                        "Brindar nuestro mayor esfuerzo para ofrecer una de las mejores experiencias
+                        de hamburguesas que alguien puede tener."
+                        </p>
+                        <h4>
+                        Visión
+                        </h4>
+                        <p>
+                        "Ser el destino preferido para los amantes de las hamburguesas, donde la calidad 
+                        y la innovación se fusionan en cada bocado."
+                        </p>
+                             <!--<img src="img/gallery/tn/portrait-01.jpg" alt="Image"/> -->   
+                            <!--<img src="img/gallery/tn/portrait-01.jpg" alt="Image"/> -->                             
+                            </div>
+                            
+
+                    </section>
+                </div>
+                <!-- Modelo de negocio section -->
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/hamburguesas.jpg"></div>                   
+                    <section id="modelo" class="tm-section">
+                        <h2 class="tm-text-primary">Modelo de negocio</h2>
+                        <hr class="mb-5">
+                        <div class="row">
+                        <h4>
+                        Estándar de calidad 
+                        </h4>
+                        <p>
+                        Nuestra carne es Black Angus USDA Choice. Molida todos los días para siempre tener el mejor sabor. 
+                        Utilizamos pan brioche de masa madre, fresco, horneado y entregado diario.
+                        <b>¡Usamos Ingredientes de 1era  calidad!</b>
+                        </p>    
+
+                        <h4>
+                        Mercado meta
+                        </h4>
+                        <p>
+                        Personas de entre 18 y 45 años de edad que buscan una experiencia gastronómica casual y deliciosa.
+                         Este mercado valora la calidad de los ingredientes, la variedad de opciones y la comodidad de 
+                         comer fuera de casa o pedir comida para llevar. Son consumidores que buscan opciones indulgentes 
+                         pero también están preocupados por la calidad de los alimentos.
+                        </p>
+                        <h4>
+                        Menú
+                        </h4>
+                        
+                        <p>
+                        Todas nuestras sucursales deben ofrecer estos productos.
+                        Descargue el siguiente archivo para obtener el menú completo.
+                        <br>
+                        <br>
+                        <button class="boton-descarga">Descargar</button>
+                        </p>
+                            <img src="img/menu.png" alt="Image"/>                                 
+                            </div>
+                            
+
+                    </section>
+                </div>
+                <!-- Informacion section -->
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/fuego.jpg"></div>
+                    <section id="about" class="tm-section">
+                        <h2 class="tm-text-primary">Información</h2>
+                        <hr class="mb-5">
+                        <div class="row tm-row-about">
+                            <div class="tm-col-about tm-col-about-l">
+                                <p class="mb-4">
+                                Para brindar transparencia y demostrar el compromiso con nuestros clientes y colaboradores, puedes
+                                conocer detalles sobre nuestros costos de ingredientes, presupuesto operativo o cualquier otro 
+                                aspecto financiero relacionado con nuestro modelo operativo.
+                                </p>
+                                <p class="mb-4">
+                                Para acceder a este valioso recurso, simplemente haz clic en el botón "Descargar" a continuación. 
+                                </p>
+                                
+                                <button class="boton-descarga">Descargar</button>
+                                <br>
+                                <br> 
+                            </div>
+                            <div class="tm-col-about tm-col-about-r">
+                                <img src="img/logo1.jpg" alt="Image" class="img-fluid mb-5 tm-img-about">
+                                <p>
+                                Este archivo proporciona una visión detallada de los números detrás de nuestras deliciosas hamburguesas 
+                                y de cómo mantenemos la calidad y la rentabilidad en nuestro negocio.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </div>
+                <!-- Soporte section -->
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-04.jpg"></div>
+                    <div id="soporte" class="tm-section">
+                        <h2 class="tm-text-primary">Soporte y entrenamiento</h2>
+                        <hr class="mb-5">
+                        <div class="row">
+                        <h3>Soporte</h3>
+                        <p>
+                        Nuestro compromiso contigo no se limita al día en que abres las puertas de tu franquicia Mítica. 
+                        Estamos a tu lado durante todo el viaje empresarial. Ofrecemos: 
+                        </p> 
+                        <h4>- Asesoramiento en Ubicación:</h4>
+                        <p>
+                        Te ayudamos a elegir la ubicación perfecta para tu franquicia, basándonos en análisis de mercado 
+                        y tendencias locales.
+                        </p>
+                        <h4>- Diseño de Tienda y Construcción:</h4>
+                        <p>
+                        Te proporcionamos orientación en el diseño de interiores y exteriores, así como apoyo en la construcción 
+                        y decoración de tu local.
+                        </p>
+                        <h4>- Marketing y Publicidad: </h4>
+                        <p>
+                        Te brindamos materiales de marketing y estrategias efectivas para promocionar tu franquicia y atraer 
+                        a clientes.
+                        <br>
+                        <br>
+                        <br>
+                        </p>
+
+                        <h3>Programa de Entrenamiento</h3>
+                        <p>
+                        Sabemos que el conocimiento es clave para el éxito. Por eso, ofrecemos un programa de entrenamiento 
+                        completo.  
+                        </p>
+                        <h4>- Preparación de Alimentos:</h4>
+                        <p>
+                        Te entrenamos en la preparación de nuestras hamburguesas gourmet, salsas exclusivas y acompañamientos, 
+                        siguiendo las recetas y estándares de Mítica.
+                        </p>
+                        <h4>- Servicio al Cliente:</h4>
+                        <p>
+                        Aprendes las mejores prácticas para brindar un servicio amable y eficiente, creando experiencias 
+                        memorables para tus clientes.
+                        </p>                        
+                        <h4>- Gestión de Negocios</h4>
+                        <p>
+                        Te proporcionamos las habilidades empresariales necesarias, desde gestión de inventario hasta control 
+                        de costos y operaciones diarias.
+                        </p>                        
+                        <h4>- Tecnología y Sistemas: </h4>
+                        <p>
+                        Te familiarizamos con nuestro sistema de punto de venta y herramientas tecnológicas para facilitar la 
+                        administración de tu franquicia.
+                        </p>                        
+                        </div>
+                    </div>
+                </div>
+                <!-- Reseñas section -->
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/fuego.jpg"></div>
+                    <section id="resenas" class="tm-section">
+                        <h2 class="tm-text-primary">Reseñas</h2>
+                        <hr class="mb-5">
+                        <div class="mt-5">
+                            <div class="tm-carousel">
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/about-01.jpg" alt="Featured Item">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title">Gabriel Mora</h3>
+                                        <p>"Si quieres comprar una franquicia y abrir tu propio restaurante, Mítica es la mejor opción"</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle">Comprador</h4>
+                                        <i class="fas fa-star nav-icon"></i>
+                                        <i class="fas fa-star nav-icon"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/about-02.jpg" alt="Featured Item">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title">Paula Guzmán</h3>
+                                        <p>"Es una gran franquicia y el franquiciador brinda un gran soporte y entrenamiento"</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle">Comprador</h4>
+                                    </div>
+                                </div>
+
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/about-03.jpg" alt="Featured Item">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title">David Rodriguez</h3>
+                                        <p>"Excelente, te guían en todo el proceso"</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle">Comprador</h4>
+                                    </div>
+                                </div>
+
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/about-01.jpg" alt="Featured Item">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title">Manuel Carrillo</h3>
+                                        <p>"Es una gran empresa, mantienen un gran estándar"</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle">Comprador</h4>
+                                    </div>
+                                </div>
+                                
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/about-02.jpg" alt="Featured Item">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title">Carolina Acosta</h3>
+                                        <p>"Es un buen negocio, pero debes cumplir muy bien con los estándares"</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle">Comprador</h4>
+                                    </div>
+                                </div>
+
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/about-03.jpg" alt="Featured Item">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title">David Sánchez</h3>
+                                        <p>"El mejor restaurante de hamburguesas en el que puedes invertir"</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle">Comprador</h4>
+                                    </div>
+                                </div>
+
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/about-01.jpg" alt="Featured Item">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title">Raúl Juárez</h3>
+                                        <p>"Algo exigentes para mantener los estándares de calidad"</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle">Comprador</h4>
+                                    </div>
+                                </div>
+                                
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/about-02.jpg" alt="Featured Item">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title">Melisa Espinosa</h3>
+                                        <p>""</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle">Comprador</h4>
+                                    </div>
+                                </div>
+
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/about-03.jpg" alt="Featured Item">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title">David Oropeza</h3>
+                                        <p>""</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle">Comprador</h4>
+                                    </div>
+                                </div>
+
+                                <div class="tm-carousel-item">
+                                    <figure class="effect-honey mb-4">
+                                        <img src="img/about-01.jpg" alt="Featured Item">
+                                        <figcaption>
+                                            <ul class="tm-social">
+                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <div class="tm-about-text">
+                                        <h3 class="mb-3 tm-text-primary tm-about-title">Iván Zúñiga</h3>
+                                        <p>""</p>
+                                        <h4 class="tm-text-secondary tm-about-subtitle">Comprador</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- contact section -->
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-04.jpg"></div>
+                    <div id="contact" class="tm-section">
+                        <h2 class="tm-text-primary">Contacto</h2>
+                        <hr class="mb-5">
+                        <div class="row">
+                            <div class="col-xl-6 tm-contact-col-l mb-4">
+                                <form id="contact-form" action="" method="POST" class="tm-contact-form">
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control rounded-0" placeholder="Name" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control rounded-0" placeholder="Email" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" id="contact-select" name="inquiry">
+                                            <option value="-">Subject</option>
+                                            <option value="sales">Sales &amp; Marketing</option>
+                                            <option value="creative">Creative Design</option>
+                                            <option value="uiux">UI / UX</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea rows="8" name="message" class="form-control rounded-0" placeholder="Message" required=></textarea>
+                                    </div>
+            
+                                    <div class="form-group tm-text-right">
+                                        <button type="submit" class="btn btn-primary">Send</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-xl-6 tm-contact-col-r">
+                                <!-- Map -->
+                                <div class="mapouter mb-4">
+                                    <div class="gmap_canvas">
+                                        <iframe width="100%" height="520" id="gmap_canvas"
+                                            src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                    </div>
+                                </div>
+            
+                                <!-- Address -->
+                                <address class="mb-4">
+                                    
+                                </address>
+            
+                                <!-- Links -->
+                                <ul class="tm-contact-links mb-4">
+                                    <li class="mb-2">
+                                        <a href="tel:0100200340">
+                                            <i class="fas fa-phone mr-2 tm-contact-link-icon"></i>
+                                            Tel: 010-020-0340
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:info@company.com">
+                                            <i class="fas fa-at mr-2 tm-contact-link-icon"></i>
+                                            Email: info@company.com
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="tm-contact-social">
+                                    <li><a href="https://fb.com/templatemo" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://youtube.com" class="tm-social-link"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Copyright -->                
+                <div class="tm-section-wrap tm-copyright row">
+                    <div class="col-12">
+                        <div class="text-right">
+                            Copyright 2020 Upright Company
+                        </div> 
+                    </div>
+                </div>                 
+            </div> <!-- .tm-main -->                      
+        </div> <!-- .row -->
+    </div> <!-- .container-fluid -->
+
+@endsection
+
+<!--
+<div class="content-post">
+
+    <div class="post-title line">
+        <h2 class="fw-bold"></h2>
+    </div>
+
+    <div class="post-introduction line">
+        <p></p>
+    </div>
+
+    <div class="post-author line">
+        <img src="" class="img-author">
+
+        <span>Autor:
+            <a href="#"></a>
+        </span>
+    </div>
+
+    <hr>
+
+    <div class="post-image">
+        <img src="" alt="imagen" class="post-image-img">
+    </div>
+
+    <div class="post-body line"></div>
+    <hr>
+</div>
+
+<div class="text-primary">
+    <h2>Comentarios</h2>
+</div>
+
+<p class="alert-post">Para comentar debe iniciar sesión</p>
+
+<div class="text-danger text-center">
+    <p class="fs-5"></p>
+</div>
+-->

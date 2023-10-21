@@ -37,6 +37,7 @@ Route::resource('comments', CommentController::class)
 
 //Ver franquicias
 Route::get('franquicia/{franquicia}', [FranquiciaController::class, 'show'])->name('franquicias.show');
+Route::get('franquicias', [FranquiciaController::class, 'lista'])->name('franquicias.lista');
 
 //Guardar comentarios
 Route::get('/comment', [CommentController::class, 'store']) ->name('comments.store');
@@ -49,3 +50,7 @@ Auth::routes();
 //Route::get('/franquicias/{franquicia}/edit', [FranquiciaController::class, 'edit'])->name('franquicias.edit');
 //Route::put('/franquicias/{franquicia}', [FranquiciaController::class, 'update'])->name('franquicias.update');
 //Route::delete('/franquicias/{franquicia}', [FranquiciaController::class, 'destroy'])->name('franquicias.destroy');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

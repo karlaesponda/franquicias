@@ -21,7 +21,7 @@
 </div>
 
 <div class="article-container">
-    <!-- Listar artículos -->
+    <!-- franquicias -->
     @foreach ($franquicias as $franquicia)
         
     <article class="article">

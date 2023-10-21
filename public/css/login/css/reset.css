@@ -37,7 +37,7 @@ input[type="password"] {
     width: 85%;
     color: white;
     font-size: 16px;
-    background: #1D448E;
+    background: #fb5849;
     padding: 14px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -51,7 +51,7 @@ input[type="password"] {
 }
 
 .button:hover{
-    background: #2979FF;
+    background: #f7685b;
 }
 
 .alert-send{
@@ -64,7 +64,7 @@ input[type="password"] {
 }
 
 .reset-title{
-    color: #1d448e;
+    color: #fb5849;
     font-weight: 900;
     font-size: 1.6rem !important;
     margin-bottom: 10px;

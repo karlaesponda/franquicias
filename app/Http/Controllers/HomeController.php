@@ -28,7 +28,7 @@ class HomeController extends Controller
         $franquicias = Franquicia::where('marca_registrada', '1')
                         ->orderBy('id', 'desc')
                         ->simplePaginate(10);
-
+                        
         return view('home', compact('franquicias'));
     }
 
