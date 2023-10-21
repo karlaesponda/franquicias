@@ -60,9 +60,12 @@ class FranquiciaController extends Controller
      */
     public function show(Franquicia $franquicia)
     {
-        //
+        // Obtener los comentarios relacionados con la franquicia
         $comments = $franquicia->comments()->simplePaginate(5);
+
+        // Pasar la franquicia y los comentarios a la vista
         return view('subscriber.franquicias.show', compact('franquicia', 'comments'));
+
     }
 
     /**

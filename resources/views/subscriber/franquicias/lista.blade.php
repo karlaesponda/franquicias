@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@extends('layouts.menu')
+
 
 @section('content')
 
@@ -20,7 +20,7 @@
                         con tu comunidad. Juntos, llevaremos la legendaria experiencia de Mítica a lugares donde la pasión
                          por la comida se encuentra con el éxito empresarial. Únete a la revolución de las hamburguesas y 
                          conviértete en una franquicia Mítica ¡hoy mismo!.</p>
-                         <li class="read-more"><a href= "{{ route('franquicias.show', $franquicia->slug)}}" class="active">Conoce más</a></li>
+                        <li class="read-more"><a href= "{{ route('franquicias.show')}}" class="active">Conoce más</a></li>
                      </div>
                   </div>
                </div>
@@ -39,7 +39,7 @@
                         <p>Únete a nosotros y lleva la experiencia de Eladio's Bar a nuevas ciudades y comunidades. Conviértete en un 
                             embajador de la diversión y el sabor, y comparte la emoción de Eladio's Bar en todo el país. ¡Es hora de unirte 
                             a nuestra creciente red de franquicias y ser parte de la historia de éxito de Eladio's Bar!"</p>
-                        <a class="read_more" href="index.html">Conoce más</a>
+                        <a class="read_more" href="#">Conoce más</a>
                      </div>
                   </div>
                </div>
