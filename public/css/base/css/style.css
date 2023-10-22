@@ -423,7 +423,7 @@ button {
 }
 
 .read_more:hover {
-     background: #03cafc;
+     background: #e08e57;
      color: #fff !important;
      transition: ease-in all 0.5s;
 }

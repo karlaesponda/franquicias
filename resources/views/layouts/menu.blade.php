@@ -12,7 +12,7 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li class="scroll-to-section"><a href= "{{ route('home.index')}}" class="active">Inicio</a></li>
-                        <li class="scroll-to-section"><a href="#about">Sobre nosotros</a></li>
+                        <li class="scroll-to-section"><a href= "{{ route('sobre_nosotros.index')}}" class="active">Sobre nosotros</a></li>
                         <li class="scroll-to-section"><a href= "{{ route('franquicias.lista')}}" class="active">Franquicias</a></li>
                         <li class="scroll-to-section"><a href="#chefs">Reseñas</a></li>
                         <li class="scroll-to-section"><a href="#reservation">Registrate</a></li>

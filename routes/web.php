@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 //Principal
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 Route::get('/all',[HomeController::class, 'all'])->name('home.all');
-
+Route::get('sobre_nosotros', [HomeController::class, 'sobre_nosotros'])->name('sobre_nosotros.index');
 //Franquicias
 
 Route::resource('franquicias', FranquiciaController::class)
@@ -36,7 +36,7 @@ Route::resource('comments', CommentController::class)
             ->names('comments');
 
 //Ver franquicias
-Route::get('franquicia', [FranquiciaController::class, 'show'])->name('franquicias.show');
+Route::get('franquicia/{id}', [FranquiciaController::class, 'show'])->name('franquicias.show');
 Route::get('franquicias', [FranquiciaController::class, 'lista'])->name('franquicias.lista');
 
 //Guardar comentarios

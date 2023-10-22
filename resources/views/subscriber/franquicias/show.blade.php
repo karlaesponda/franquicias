@@ -1,6 +1,4 @@
 @extends('layouts.base')
-@extends('layouts.menu')
-
 
 @section('content')
 
@@ -14,7 +12,8 @@
                     </button>
                     <div>
                         <div class="tm-brand-box">
-                            <h1 class="tm-brand">Mítica</h1>
+                            <h1 class="tm-brand">{{ $franquicia->nombre_restaurante }}</h1>
+                            
                         </div>                
                         <ul id="tm-main-nav">
                             <li class="nav-item">                                
@@ -72,45 +71,37 @@
                 <div class="tm-section-wrap">
                     <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-01.jpg"></div>                   
                     <section id="home" class="tm-section">
-                        <h2 class="tm-text-primary">Mítica</h2>
+                        <br>
+                        <br>
+                        <br>
+                        <h2 class="tm-text-primary">{{$franquicia->nombre_restaurante}}</h2>
                         <hr class="mb-5">
                         <div class="row">
                         <p>
-                        Mítica es un concepto de hamburguesería fast-casual que nace en el 2020 pero con muchos años atrás de prueba y error para poder conseguir nuestro gran sabor.
-                        Estamos inspirados en el verdadero amor por los hamburguesas.  
+                        {{$franquicia->descripcion}}
                         </p>
-                        <p>
-                        El menú es un equilibrio entre lo clásico y la innovación, que atrae tanto a los 
-                        principiantes como a los amantes de la comida, a través de un toque, que abarca 
-                        nuestro ingrediente clave, la carne.
-                        </p>
+
                         <h4>
                         Historia
                         </h4>
                         <p>
-                        El menú es un equilibrio entre lo clásico y la innovación, que atrae tanto a los 
-                        principiantes como a los amantes de la comida, a través de un toque, que abarca 
-                        nuestro ingrediente clave, la carne.
+                        {{$franquicia->historia}}
                         </p>
+                        <h4>
+                        Historia
+                        </h4>
+                        <p>{{$franquicia->historia}}</p>
                         <h4>
                         Misión
                         </h4>
-                        <p>
-                        "Brindar nuestro mayor esfuerzo para ofrecer una de las mejores experiencias
-                        de hamburguesas que alguien puede tener."
-                        </p>
+                        <p>{{$franquicia->mision}}</p>
                         <h4>
                         Visión
                         </h4>
-                        <p>
-                        "Ser el destino preferido para los amantes de las hamburguesas, donde la calidad 
-                        y la innovación se fusionan en cada bocado."
-                        </p>
+                        <p>{{$franquicia->vision}}</p>
                              <!--<img src="img/gallery/tn/portrait-01.jpg" alt="Image"/> -->   
                             <!--<img src="img/gallery/tn/portrait-01.jpg" alt="Image"/> -->                             
-                            </div>
-                            
-
+                    </div>
                     </section>
                 </div>
                 <!-- Modelo de negocio section -->
@@ -123,32 +114,23 @@
                         <h4>
                         Estándar de calidad 
                         </h4>
-                        <p>
-                        Nuestra carne es Black Angus USDA Choice. Molida todos los días para siempre tener el mejor sabor. 
-                        Utilizamos pan brioche de masa madre, fresco, horneado y entregado diario.
-                        <b>¡Usamos Ingredientes de 1era  calidad!</b>
-                        </p>    
-
+                        <p>{{$franquicia->estandar_calidad}}</p>
                         <h4>
                         Mercado meta
                         </h4>
                         <p>
-                        Personas de entre 18 y 45 años de edad que buscan una experiencia gastronómica casual y deliciosa.
-                         Este mercado valora la calidad de los ingredientes, la variedad de opciones y la comodidad de 
-                         comer fuera de casa o pedir comida para llevar. Son consumidores que buscan opciones indulgentes 
-                         pero también están preocupados por la calidad de los alimentos.
+                            {{$franquicia->mercado_meta}}
                         </p>
                         <h4>
                         Menú
                         </h4>
-                        
                         <p>
-                        Todas nuestras sucursales deben ofrecer estos productos.
-                        Descargue el siguiente archivo para obtener el menú completo.
-                        <br>
-                        <br>
-                        <button class="boton-descarga">Descargar</button>
+                            {{$franquicia->menu}}
+                            <br>
+                            <br>
+                            <button class="boton-descarga">Descargar</button>
                         </p>
+
                             <img src="img/menu.png" alt="Image"/>                                 
                             </div>
                             
@@ -171,6 +153,9 @@
                                 <p class="mb-4">
                                 Para acceder a este valioso recurso, simplemente haz clic en el botón "Descargar" a continuación. 
                                 </p>
+                                <p>
+                                {{$franquicia->inf_financiera}}
+                                </p>
                                 
                                 <button class="boton-descarga">Descargar</button>
                                 <br>
@@ -179,8 +164,7 @@
                             <div class="tm-col-about tm-col-about-r">
                                 <img src="img/logo1.jpg" alt="Image" class="img-fluid mb-5 tm-img-about">
                                 <p>
-                                Este archivo proporciona una visión detallada de los números detrás de nuestras deliciosas hamburguesas 
-                                y de cómo mantenemos la calidad y la rentabilidad en nuestro negocio.
+                                *agregar una descripcion*
                                 </p>
                             </div>
                         </div>
@@ -196,23 +180,19 @@
                         <div class="row">
                         <h3>Soporte</h3>
                         <p>
-                        Nuestro compromiso contigo no se limita al día en que abres las puertas de tu franquicia Mítica. 
-                        Estamos a tu lado durante todo el viaje empresarial. Ofrecemos: 
-                        </p> 
+                            {{$franquicia->soporte}}
+                        </p>
                         <h4>- Asesoramiento en Ubicación:</h4>
                         <p>
-                        Te ayudamos a elegir la ubicación perfecta para tu franquicia, basándonos en análisis de mercado 
-                        y tendencias locales.
+                        *Poner campo para que describan si proporcionan esta información*
                         </p>
                         <h4>- Diseño de Tienda y Construcción:</h4>
                         <p>
-                        Te proporcionamos orientación en el diseño de interiores y exteriores, así como apoyo en la construcción 
-                        y decoración de tu local.
+                        *Poner campo para que describan si proporcionan esta información*
                         </p>
                         <h4>- Marketing y Publicidad: </h4>
                         <p>
-                        Te brindamos materiales de marketing y estrategias efectivas para promocionar tu franquicia y atraer 
-                        a clientes.
+                        *Poner campo para que describan si proporcionan esta información*
                         <br>
                         <br>
                         <br>
@@ -220,28 +200,23 @@
 
                         <h3>Programa de Entrenamiento</h3>
                         <p>
-                        Sabemos que el conocimiento es clave para el éxito. Por eso, ofrecemos un programa de entrenamiento 
-                        completo.  
+                            {{$franquicia->entrenamiento}}
                         </p>
                         <h4>- Preparación de Alimentos:</h4>
                         <p>
-                        Te entrenamos en la preparación de nuestras hamburguesas gourmet, salsas exclusivas y acompañamientos, 
-                        siguiendo las recetas y estándares de Mítica.
+                        *Poner campo para que describan si proporcionan esta información*
                         </p>
                         <h4>- Servicio al Cliente:</h4>
                         <p>
-                        Aprendes las mejores prácticas para brindar un servicio amable y eficiente, creando experiencias 
-                        memorables para tus clientes.
+                        *Poner campo para que describan si proporcionan esta información*
                         </p>                        
                         <h4>- Gestión de Negocios</h4>
                         <p>
-                        Te proporcionamos las habilidades empresariales necesarias, desde gestión de inventario hasta control 
-                        de costos y operaciones diarias.
+                        *Poner campo para que describan si proporcionan esta información*
                         </p>                        
                         <h4>- Tecnología y Sistemas: </h4>
                         <p>
-                        Te familiarizamos con nuestro sistema de punto de venta y herramientas tecnológicas para facilitar la 
-                        administración de tu franquicia.
+                        *Poner campo para que describan si proporcionan esta información*
                         </p>                        
                         </div>
                     </div>

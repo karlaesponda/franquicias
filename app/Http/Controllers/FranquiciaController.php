@@ -58,15 +58,18 @@ class FranquiciaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Franquicia $franquicia)
+    public function show($id)
     {
-        // Obtener los comentarios relacionados con la franquicia
+        // Busca la franquicia por su ID
+        $franquicia = Franquicia::findOrFail($id);
+    
+        // Ahora tienes la franquicia cargada y puedes acceder a sus propiedades
         $comments = $franquicia->comments()->simplePaginate(5);
-
-        // Pasar la franquicia y los comentarios a la vista
+    
+        // Devuelve la vista con los datos de la franquicia
         return view('subscriber.franquicias.show', compact('franquicia', 'comments'));
-
     }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -146,11 +149,10 @@ class FranquiciaController extends Controller
 
     public function lista()
     {
-        // Obtén todas las franquicias paginadas en grupos de 10 por página
-        $franquicias = Franquicia::paginate(10);
-
-        // Devuelve la vista 'lista.blade.php' con los datos de las franquicias
-        return view('subscriber.franquicias.lista', ['franquicias' => $franquicias]);        // Lógica para mostrar una lista de franquicias
+        $franquicias = Franquicia::all(); // Obtén todas las franquicias
+    
+        return view('subscriber.franquicias.lista', compact('franquicias'));
     }
+    
     
 }

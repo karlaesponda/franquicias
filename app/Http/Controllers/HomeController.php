@@ -39,4 +39,8 @@ class HomeController extends Controller
 
         return view('home', compact('franquicias'));
     }
+
+    public function sobre_nosotros(){
+        return view('sobre_nosotros');
+    }
 }
