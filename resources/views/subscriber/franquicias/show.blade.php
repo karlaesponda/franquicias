@@ -61,12 +61,12 @@
                         </ul>
                     </div>
                     <footer class="mb-3 tm-mt-100">
-                        Design: <a href="https://templatemo.com" target="_parent" rel="sponsored">TemplateMo</a>
+                        
                     </footer>
                 </nav>
             </div>
             
-            <div class="tm-main">
+
                 <!-- Home section -->
                 <div class="tm-section-wrap">
                     <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-01.jpg"></div>                   
@@ -77,20 +77,13 @@
                         <h2 class="tm-text-primary">{{$franquicia->nombre_restaurante}}</h2>
                         <hr class="mb-5">
                         <div class="row">
-                        <p>
-                        {{$franquicia->descripcion}}
-                        </p>
-
-                        <h4>
-                        Historia
-                        </h4>
-                        <p>
-                        {{$franquicia->historia}}
-                        </p>
+                        
+                        <br>
                         <h4>
                         Historia
                         </h4>
                         <p>{{$franquicia->historia}}</p>
+
                         <h4>
                         Misión
                         </h4>
@@ -99,6 +92,8 @@
                         Visión
                         </h4>
                         <p>{{$franquicia->vision}}</p>
+
+                        <p>{{$franquicia->descripcion}}</p>
                              <!--<img src="img/gallery/tn/portrait-01.jpg" alt="Image"/> -->   
                             <!--<img src="img/gallery/tn/portrait-01.jpg" alt="Image"/> -->                             
                     </div>
@@ -219,6 +214,22 @@
                         *Poner campo para que describan si proporcionan esta información*
                         </p>                        
                         </div>
+                    </div>
+                </div>
+                <!-- Informacion section -->
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/fuego.jpg"></div>
+                    <section id="about" class="tm-section">
+                        <h2 class="tm-text-primary">Información</h2>
+                        <hr class="mb-5">
+                        <div class="row tm-row-about">
+                            <div class="tm-col-about tm-col-about-l">
+                            @if (Auth::check())
+                            @include('subscriber.comments.create')
+                            @endif
+                            </div>
+                        </div>
+                    </section>
                     </div>
                 </div>
                 <!-- Reseñas section -->
@@ -493,7 +504,7 @@
                 <div class="tm-section-wrap tm-copyright row">
                     <div class="col-12">
                         <div class="text-right">
-                            Copyright 2020 Upright Company
+                            
                         </div> 
                     </div>
                 </div>                 
@@ -503,42 +514,4 @@
 
 @endsection
 
-<!--
-<div class="content-post">
 
-    <div class="post-title line">
-        <h2 class="fw-bold"></h2>
-    </div>
-
-    <div class="post-introduction line">
-        <p></p>
-    </div>
-
-    <div class="post-author line">
-        <img src="" class="img-author">
-
-        <span>Autor:
-            <a href="#"></a>
-        </span>
-    </div>
-
-    <hr>
-
-    <div class="post-image">
-        <img src="" alt="imagen" class="post-image-img">
-    </div>
-
-    <div class="post-body line"></div>
-    <hr>
-</div>
-
-<div class="text-primary">
-    <h2>Comentarios</h2>
-</div>
-
-<p class="alert-post">Para comentar debe iniciar sesión</p>
-
-<div class="text-danger text-center">
-    <p class="fs-5"></p>
-</div>
--->

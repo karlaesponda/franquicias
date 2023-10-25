@@ -19,6 +19,7 @@ class CommentFactory extends Factory
     public function definition(): array
     {
         return [
+            'value' => $this->faker->numberBetween($min=1, $max=5),
             'descripcion' => $this->faker->realText(255),
             'user_id' => User::all()->random()->id,
             'franquicia_id' => Franquicia::all()->random()->id,

@@ -46,21 +46,21 @@ class CommentController extends Controller
         //Verificar si en la franquicia ya existe un comentario del usuario
         $result = Comment::where('user_id', Auth::user()->id)
                             ->where('franquicia_id', $request->franquicia_id)->exists();
-                            //Consulta para obtener el slug y estado de la franquicia comentada
-                            $franquicia = Franquicia::select('');
+        //Consulta para obtener el slug y estado de la franquicia comentada
+        $franquicia = Franquicia::select('slug')->find($request->franquicia_id);
 
-                            if(!$result){
-                                Comment::create([
-                                    'value' => $request->value,
-                                    'descripcion' => $request->descripcion,
-                                    'user_id' => Auth::user()->id,
-                                    'franquicia_id' => $request->franquicia_id,
-                                ]);
-                                return redirect()->action([FranquiciaController::class, 'show'], [$franquicia->slug]);
-                            }else{
-                                return redirect()->action([FranquiciaController::class, 'show'], [$franquicia->slug])
-                                                 ->with('success-error', 'Solo puedes comentar una vez');
-                            }
+        if(!$result){
+            Comment::create([
+                'value' => $request->value,
+                'descripcion' => $request->descripcion,
+                'user_id' => Auth::user()->id,
+                'franquicia_id' => $request->franquicia_id,
+            ]);
+            return redirect()->action([FranquiciaController::class, 'show'], [$franquicia->slug]);
+        }else{
+            return redirect()->action([FranquiciaController::class, 'show'], [$franquicia->slug])
+                             ->with('success-error', 'Solo puedes comentar una vez');
+        }
 
     }
 

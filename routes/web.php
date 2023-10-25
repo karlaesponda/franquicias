@@ -40,7 +40,7 @@ Route::get('franquicia/{id}', [FranquiciaController::class, 'show'])->name('fran
 Route::get('franquicias', [FranquiciaController::class, 'lista'])->name('franquicias.lista');
 
 //Guardar comentarios
-Route::get('/comment', [CommentController::class, 'store']) ->name('comments.store');
+Route::post('/comment', [CommentController::class, 'store']) ->name('comments.store');
 Auth::routes();
 
 

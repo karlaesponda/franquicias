@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="{{ asset('css/base/css/magnific-popup.css') }}">
     
     <!-- Estilos de cada franquicia -->
-    <link rel="stylesheet" href="{{asset('css/base/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/base/css/all.min.css')}}">
     <link rel="stylesheet" href="{{ asset('css/base/css/slick.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/base/css/slick-theme.css') }}">
 <!-- Plugins -->
