@@ -23,10 +23,13 @@ class FranquiciaRequest extends FormRequest
     {
 
         $slug = request()->isMethod('put') ? 'required|unique:franquicias,slug,'.$this->id : 'required|unique:franquicias';
-        $logotipo = request()->isMethod('put') ? 'nullable|mimes:jpeg,png,jpg,gif,svg|max:8000' : 'required|logotipo';
+        //$logotipo = request()->isMethod('put') ? 'nullable|mimes:jpeg,png,jpg,gif,svg|max:8000' : 'required|logotipo';
+        //$menu = request()->isMethod('put') ? 'nullable|mimes:jpeg,png,jpg,gif,svg|max:8000' : 'required|logotipo';
+        //$inf_financiera = request()->isMethod('put') ? 'nullable|mimes:jpeg,png,jpg,gif,svg|max:8000' : 'required|logotipo';
+        
         return [
             //
-            'title' => 'required|min=5|max:255',
+            'title' => 'required',
             'nombre_restaurante' => 'required',
             'slug' => $slug,
             'razon_social' => 'required',
@@ -35,7 +38,7 @@ class FranquiciaRequest extends FormRequest
             'num_sucursales' => 'required|integer',
             'marca_registrada' => 'required|boolean',
             'costo_marca' => 'required|integer',
-            'logotipo' => $logotipo,
+            'logotipo' => request()->isMethod('put') ? 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:8000' : 'required|image|mimes:jpeg,png,jpg,gif,svg|max:8000',
             'tipo_restaurante' => 'required',
             'website' => 'required',
             'facebook' => 'required',
@@ -46,8 +49,8 @@ class FranquiciaRequest extends FormRequest
             'vision' => 'required',
             'estandar_calidad' => 'required',
             'mercado_meta' => 'required',
-            'menu' => 'required',
-            'inf_financiera' => 'required',
+            'menu' => request()->isMethod('put') ? 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:8000' : 'required|image|mimes:jpeg,png,jpg,gif,svg|max:8000',
+            'inf_financiera' => request()->isMethod('put') ? 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:8000' : 'required|image|mimes:jpeg,png,jpg,gif,svg|max:8000',
             'soporte' => 'required',
             'entrenamiento' => 'required',
         ];

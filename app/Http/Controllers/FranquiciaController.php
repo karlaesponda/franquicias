@@ -29,7 +29,7 @@ class FranquiciaController extends Controller
      */
     public function create()
     {
-        return view('admin.franquicias.create', compact('franquicias'));
+        return view('admin.franquicias.create');
     }
 
     /**
@@ -47,6 +47,17 @@ class FranquiciaController extends Controller
         if($request->hasFile('logotipo')){
             $franquicia['logotipo'] = $request->file('logotipo')->store('franquicias');
         }
+
+        // Validar si hay un archivo de menú en el request
+        if ($request->hasFile('menu')) {
+            $franquicia['menu'] = $request->file('menu')->store('franquicias');
+        }
+
+        // Validar si hay un archivo de información financiera en el request
+        if ($request->hasFile('inf_financiera')) {
+            $franquicia['inf_financiera'] = $request->file('inf_financiera')->store('franquicias');
+        }
+
 
         Franquicia::create($franquicia);
 
@@ -95,6 +106,22 @@ class FranquiciaController extends Controller
             $franquicia['logotipo'] = $request->file('logotipo')->store('franquicias');
         }
 
+        //Sie l usuario sube una nuevo meno
+        if($request->hasFile('menu')){
+            //Eliminar menu anterior
+            File::delete(public_path('storage/' . $franquicia->menu));
+            //Asigna el nuevo menu
+            $franquicia['menu'] = $request->file('menu')->store('franquicias');
+        }
+
+        //Sie l usuario sube un nuevo archivo de inf_financiera
+        if($request->hasFile('inf_financiera')){
+            //Eliminar inf_financiera anterior
+            File::delete(public_path('storage/' . $franquicia->inf_financiera));
+            //Asigna el nuevo inf_financiera
+            $franquicia['inf_financiera'] = $request->file('inf_financiera')->store('franquicias');
+        }
+
         //Actualiza los daots
         $franquicia->update([
             'title' => $request->title,
@@ -116,10 +143,15 @@ class FranquiciaController extends Controller
             'vision' => $request-> vision,
             'estandar_calidad' => $request-> estandar_calidad,
             'mercado_meta' => $request-> mercado_meta,
-            'menu' => $request-> menu,
-            'inf_financiera' => $request-> inf_financiera,
             'soporte' => $request-> soporte,
+            'asesoramiento_ubi' => $request-> soporte,
+            'diseno_tienda' => $request-> soporte,
+            'marketing' => $request-> soporte,
             'entrenamiento' => $request->entrenamiento,
+            'preparacion' => $request-> soporte,
+            'servicio_cliente' => $request-> soporte,
+            'gestion' => $request-> soporte,
+            'tecnologia' => $request-> soporte,
             'user_id' => Auth::user()->id,
         ]);
 
@@ -136,6 +168,14 @@ class FranquiciaController extends Controller
         //Eliminar el logotipo de la carpeta
         if($franquicia->logotipo){
             File::delete(public_path('storage/' . $franquicia->logotipo));
+        }
+        //Eliminar el menu de la carpeta
+        if($franquicia->menu){
+            File::delete(public_path('storage/' . $franquicia->menu));
+        }
+        //Eliminar inf_financiera de la carpeta
+        if($franquicia->inf_financiera){
+            File::delete(public_path('storage/' . $franquicia->inf_financiera));
         }
         
 

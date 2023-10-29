@@ -36,7 +36,14 @@ return new class extends Migration
             $table->string('menu');
             $table->string('inf_financiera');
             $table->text('soporte');
+            $table->text('asesoramiento_ubi');
+            $table->text('diseno_tienda');
+            $table->text('marketing');
             $table->text('entrenamiento');
+            $table->text('preparacion');
+            $table->text('servicio_cliente');
+            $table->text('gestion');
+            $table->text('tecnologia');
             $table->timestamps();
 
             //relacion 1 A 1 con usuario

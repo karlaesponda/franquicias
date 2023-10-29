@@ -9,6 +9,14 @@
                     <img src="{{ asset('img/dauroweb-logo.png') }}" alt="Mi Foto">
                     </a>
                     <!-- ***** Logo End ***** -->
+                    <!--si el usuario no está autenticado-->
+                    @guest
+                    <ul class="nav">
+                        <li class="me-2"><a href="{{route('login')}}" class="login">Acceder</a></li>
+                        <br>
+                        <li><a href="{{route('register')}}" class="create">Crear cuenta</a></li>
+                    </ul>
+                    @else
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li class="scroll-to-section"><a href= "{{ route('home.index')}}" class="active">Inicio</a></li>
@@ -16,6 +24,17 @@
                         <li class="scroll-to-section"><a href= "{{ route('franquicias.lista')}}" class="active">Franquicias</a></li>
                         <li class="scroll-to-section"><a href="#chefs">Reseñas</a></li>
                         <li class="scroll-to-section"><a href="#reservation">Registrate</a></li>
+                        <li class="scroll-to-section"><a href= "{{ route('admin.index')}}" class="active">Ir al admin</a></li>
+                        
+                        <li>
+                            <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
+                    
+                            @csrf
+                            </form> 
+                            <a class="dropdown-item" href="{{ route('logout')}}" onclick="event.preventDefault(); 
+                                document.getElementById('logout-form').submit();">Salir</a>
+                        </li>  
+
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -24,6 +43,7 @@
                 </nav>
             </div>
         </div>
+        @endguest
     </div>
 </header>
 <!-- ***** Header Area End ***** -->

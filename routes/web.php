@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FranquiciaController;
 use App\Http\Controllers\HomeController;
@@ -23,17 +24,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 Route::get('/all',[HomeController::class, 'all'])->name('home.all');
 Route::get('sobre_nosotros', [HomeController::class, 'sobre_nosotros'])->name('sobre_nosotros.index');
-//Franquicias
 
-Route::resource('franquicias', FranquiciaController::class)
+//Admin
+Route::get('/admin', [AdminController::class,'index'])->name('admin.index');
+
+//Rutas del admin
+Route::namespace('App\Http\Controllers')->prefix('admin')->group(function () {
+    //Franquicias
+    Route::resource('franquicias', 'FranquiciaController')
                 ->except('show')
                 ->names('franquicias');
+    //Comentarios
+    Route::resource('comments', 'CommentController')
+                ->only('index', 'destroy')
+                ->names('comments');
+
+});
 
 
-//Comentarios
-Route::resource('comments', CommentController::class)
-            ->only('index', 'destroy')
-            ->names('comments');
 
 //Ver franquicias
 Route::get('franquicia/{id}', [FranquiciaController::class, 'show'])->name('franquicias.show');

@@ -225,9 +225,19 @@
                         <div class="row tm-row-about">
                             <div class="tm-col-about tm-col-about-l">
                             @if (Auth::check())
-                            @include('subscriber.comments.create')
+                                @include('subscriber.comments.create')
+                            @else
+                                <p>Para comentar debe iniciar sesión</p>
                             @endif
+                            
                             </div>
+                            @if (session('success-error'))
+                            <div class="text-danger text-center">
+                                <p>{{session('success-error')}}</p>
+                            </div>    
+                            @endif
+
+                            @include('subscriber.comments.show')
                         </div>
                     </section>
                     </div>
