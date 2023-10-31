@@ -49,8 +49,8 @@ class FranquiciaRequest extends FormRequest
             'vision' => 'required',
             'estandar_calidad' => 'required',
             'mercado_meta' => 'required',
-            'menu' => request()->isMethod('put') ? 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:8000' : 'required|image|mimes:jpeg,png,jpg,gif,svg|max:8000',
-            'inf_financiera' => request()->isMethod('put') ? 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:8000' : 'required|image|mimes:jpeg,png,jpg,gif,svg|max:8000',
+            'menu' => request()->isMethod('put') ? 'nullable|file|mimetypes:application/pdf,application/msword|max:2048' : 'required|file|mimetypes:application/pdf,application/msword|max:2048',
+            'inf_financiera' => request()->isMethod('put') ? 'nullable|file|mimetypes:application/pdf,application/msword|max:2048' : 'required|file|mimetypes:application/pdf,application/msword|max:2048',
             'soporte' => 'required',
             'entrenamiento' => 'required',
         ];

@@ -321,14 +321,14 @@ return [
             'text' => 'Franquicias',
             'route'=> 'franquicias.index',
             'icon' => 'fas fa-poll',
-            'active' => ['franquicias*'],
+            'active' => ['admin/franquicias*'],
         ],
 
         [
             'text' => 'Comentarios',
             'route'=> 'comments.index',
             'icon' => 'fas fa-poll',
-            'active' => ['comments*'],
+            'active' => ['admin/comments*'],
         ],
 
 

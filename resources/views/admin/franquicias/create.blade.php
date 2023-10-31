@@ -126,7 +126,7 @@
                 @enderror
             
             </div>            
-            <!-- AQUÍ VA COSTO_MARCA-->
+            
 
             <div class="form-group">
                 <label>Costo de Marca</label>
@@ -161,6 +161,21 @@
                     value="{{old('tipo_restaurante')}}">
 
                 @error('tipo_restaurante')
+                <span class="text-danger">
+                    <span>* {{$message}}</span>
+                </span>
+                @enderror
+
+            </div>
+
+
+            <div class="form-group">
+                <label>Sitio Web</label>
+                <input type="text" class="form-control" id="website" name='website'
+                    placeholder="Ingrese el URL de su Sitio Web" minlength="5" maxlength="255"
+                    value="{{old('website')}}">
+
+                @error('website')
                 <span class="text-danger">
                     <span>* {{$message}}</span>
                 </span>
@@ -432,7 +447,7 @@
 
             </div>   
 
-            <input type="submit" value="Agregar artículo" class="btn btn-primary">
+            <input type="submit" value="Agregar franquicia" class="btn btn-primary">
         </form>
     </div>
 </div>

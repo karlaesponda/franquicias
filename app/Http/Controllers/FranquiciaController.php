@@ -87,6 +87,7 @@ class FranquiciaController extends Controller
      */
     public function edit(Franquicia $franquicia)
     {
+        $this->authorize('view', $franquicia);
         //
         return view('admin.franquicias.edit', compact('franquicia'));
    
@@ -98,6 +99,9 @@ class FranquiciaController extends Controller
      */
     public function update(FranquiciaRequest $request, Franquicia $franquicia)
     {
+
+        $this->authorize('update', $franquicia);
+        
         //Sie l usuario sube una nueva imagen
         if($request->hasFile('logotipo')){
             //Eliminar logotipo anterior

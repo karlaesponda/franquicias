@@ -10,6 +10,11 @@
                     <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
                         <i class="fas fa-bars"></i>
                     </button>
+
+                    <div>
+                        <br>
+                        <br>
+                    </div>
                     <div>
                         <div class="tm-brand-box">
                             <h1 class="tm-brand">{{ $franquicia->nombre_restaurante }}</h1>
@@ -123,7 +128,11 @@
                             {{$franquicia->menu}}
                             <br>
                             <br>
-                            <button class="boton-descarga">Descargar</button>
+                            
+                            <a href="{{ asset('storage/' . $franquicia->menu) }}" download>
+                                <button class="boton-descarga" type="button">Descargar Menú</button>
+                            </a>
+
                         </p>
 
                             <img src="img/menu.png" alt="Image"/>                                 
@@ -152,7 +161,9 @@
                                 {{$franquicia->inf_financiera}}
                                 </p>
                                 
-                                <button class="boton-descarga">Descargar</button>
+                                <a href="{{ asset('storage/' . $franquicia->inf_financiera) }}" download>
+                                    <button class="boton-descarga" type="button">Descargar Información Financiera</button>
+                                </a>
                                 <br>
                                 <br> 
                             </div>
