@@ -10,9 +10,15 @@ use App\Http\Requests\FranquiciaRequest;
 
 class FranquiciaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    public function __construct()
+    {
+        $this->middleware('can:franquicias.index')->only('index');
+        $this->middleware('can:franquicias.create')->only('create', 'store');
+        $this->middleware('can:franquicias.edit')->only('edit', 'update');
+        $this->middleware('can:franquicias.destroy')->only('destroy');
+       
+    }   
+
     public function index()
     {
         //Mostrar las franquicias en el admin
@@ -169,6 +175,7 @@ class FranquiciaController extends Controller
      */
     public function destroy(Franquicia $franquicia)
     {
+        $this->authorize('delete', $franquicia);
         //Eliminar el logotipo de la carpeta
         if($franquicia->logotipo){
             File::delete(public_path('storage/' . $franquicia->logotipo));

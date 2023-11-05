@@ -15,7 +15,7 @@
             <div class="row">
                <div class="col-md-5">
                   <div  class="shop_img">
-                     <figure><img src="img/logo2.png" alt="#"/></figure>
+                     <figure><img src="{{ asset('storage/' . $franquicia->logotipo) }}" alt="{{ $franquicia->nombre_restaurante }} Logo">></figure>
                   </div>
                </div>
                <div class="col-md-7 padding_right0">
@@ -27,7 +27,7 @@
                             {{ $franquicia->descripcion }}
                             <br>
                             <br>
-                            <a class="read_more" href="{{ route('franquicias.show', $franquicia->id) }}">Conoce más sobre {{ $franquicia->nombre_restaurante }}</a>
+                            <a class="read_more" href="{{ route('franquicias.show', $franquicia->id) }}">Conoce más</a>
                             </p>
                             
                         </div>

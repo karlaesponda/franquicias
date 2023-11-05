@@ -86,7 +86,7 @@
             <div class="form-group">
                 <label>anios_operacion</label>
                 <input type="text" class="form-control" id="anios_operacion" name='anios_operacion' 
-                minlength="5" maxlength="255" value="{{$franquicia->anios_operacion}}">
+                value="{{$franquicia->anios_operacion}}">
        
                 @error('anios_operacion')
                 <span class="text-danger">
@@ -99,7 +99,7 @@
             <div class="form-group">
                 <label>Número de Sucursales</label>
                 <input type="text" class="form-control" id="num_sucursales" name='num_sucursales' 
-                minlength="5" maxlength="255" value="{{$franquicia->num_sucursales}}">
+                value="{{$franquicia->num_sucursales}}">
        
                 @error('num_sucursales')
                 <span class="text-danger">
@@ -115,12 +115,12 @@
             <div class="form-group">
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">Sí</label>
-                    <input class="form-check-input ml-2" type="radio" name='marca_registrada' id="marca_registrada" value="0">
+                    <input class="form-check-input ml-2" type="radio" name='marca_registrada' id="marca_registrada" value="1">
                 </div>
 
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">No</label>
-                    <input class="form-check-input ml-2" type="radio" name='marca_registrada' id="marca_registrada" value="1">
+                    <input class="form-check-input ml-2" type="radio" name='marca_registrada' id="marca_registrada" value="0">
                 </div>
 
                 @error('marca_registrada')

@@ -30,7 +30,8 @@ hr {
 
 .logo {
     width: 20%;
-    margin-top: 1px;
+    margin-top: 0px;
+    padding-top: 0%;
 }
 
 .logo a {

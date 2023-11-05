@@ -10,6 +10,8 @@
 
 <form method="POST" class="form" action="{{route('register')}}" novalidate>
     @csrf
+    <br>
+    <br>
     <h2>Crear cuenta</h2>
     <div class="content-login">
         <div class="input-content">
@@ -22,6 +24,58 @@
             </span> 
             @enderror
 
+
+        </div>
+
+        <div class="input-content">
+            <input type="text" name="username" placeholder="Usuario"
+                value="{{old('username')}}" 
+                autofocus>
+
+            @error('username')
+            <span class="alert-red">
+                <span>*{{$message}}</span>
+            </span>                
+            @enderror
+
+        </div>
+
+        <div class="input-content">
+            <input type="text" name="direccion" placeholder="Dirección"
+                value="{{old('direccion')}}" 
+                autofocus>
+
+            @error('direccion')
+            <span class="alert-red">
+                <span>*{{$message}}</span>
+            </span>                
+            @enderror
+
+        </div>
+
+        <div class="input-content">
+            <input type="text" name="cp" placeholder="CP"
+                value="{{old('cp')}}" 
+                autofocus>
+
+            @error('cp')
+            <span class="alert-red">
+                <span>*{{$message}}</span>
+            </span>                
+            @enderror
+
+        </div>
+
+        <div class="input-content">
+            <input type="text" name="telefono" placeholder="Teléfono"
+                value="{{old('telefono')}}" 
+                autofocus>
+
+            @error('telefono')
+            <span class="alert-red">
+                <span>*{{$message}}</span>
+            </span>                
+            @enderror
 
         </div>
 

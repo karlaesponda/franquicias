@@ -1,17 +1,19 @@
 <!-- ***** Header Area Start ***** -->
-<header class="header-area header-sticky">
+<header class="header-area header-sticky fixed-top">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="home.html" class="logo">
-                    <img src="{{ asset('img/dauroweb-logo.png') }}" alt="Mi Foto">
+                    <img src="{{ asset('img/2.png') }}" alt="Mi Foto">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!--si el usuario no está autenticado-->
                     @guest
                     <ul class="nav">
+                        <li class="me-2"><a href="{{route('home.index')}}" class="login">Inicio</a></li>
+                        <br>
                         <li class="me-2"><a href="{{route('login')}}" class="login">Acceder</a></li>
                         <br>
                         <li><a href="{{route('register')}}" class="create">Crear cuenta</a></li>
@@ -22,10 +24,10 @@
                         <li class="scroll-to-section"><a href= "{{ route('home.index')}}" class="active">Inicio</a></li>
                         <li class="scroll-to-section"><a href= "{{ route('sobre_nosotros.index')}}" class="active">Sobre nosotros</a></li>
                         <li class="scroll-to-section"><a href= "{{ route('franquicias.lista')}}" class="active">Franquicias</a></li>
-                        <li class="scroll-to-section"><a href="#chefs">Reseñas</a></li>
                         <li class="scroll-to-section"><a href="#reservation">Registrate</a></li>
+                        @can('admin.index')
                         <li class="scroll-to-section"><a href= "{{ route('admin.index')}}" class="active">Ir al admin</a></li>
-                        
+                        @endcan
                         <li>
                             <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
                     

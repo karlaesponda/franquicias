@@ -4,7 +4,7 @@
 
 
 <div class="form-content">
-    <form method="POST" action="{{'comments.store'}}" class="form-general comments">
+    <form method="POST" action="{{route('comments.store')}}" class="form-general comments">
         @csrf
         <div class="form-group fs-5">
             <label for="start-label-title">Déjanos tu calificación:</label>

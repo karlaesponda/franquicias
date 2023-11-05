@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\Comment;
 use App\Models\Franquicia;
 use Illuminate\Database\Seeder;
+use Database\Seeders\RoleSeeder;
 use Illuminate\Support\Facades\Storage;
 
 class DatabaseSeeder extends Seeder
@@ -22,7 +23,9 @@ class DatabaseSeeder extends Seeder
         //crear carpeta para almacenar las imagenes
         Storage::makeDirectory('franquicias');
         //llamar al seeder
+        $this->call(RoleSeeder::class);
         $this->call(UserSeeder::class);
+        
         //Factories
         Franquicia::factory(15)->create();
         Comment::factory(20)->create();

@@ -312,16 +312,23 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'Dashboard',
-            'route'       => 'admin.index',
-            'icon'        => 'fas fa-pager',
+            'text' => 'Dashboard',
+            'route'=> 'admin.index',
+            'icon' => 'fas fa-pager',
+            'can'  => 'admin.index'
         ],
         ['header' => 'PANEL'],
+        [
+            'text' => 'Ir a Inicio',
+            'route'=> 'home.index',
+            'icon' => 'fas fa-home',
+        ],
         [
             'text' => 'Franquicias',
             'route'=> 'franquicias.index',
             'icon' => 'fas fa-poll',
             'active' => ['admin/franquicias*'],
+            'can'    => 'franquicias.index'
         ],
 
         [
@@ -329,6 +336,21 @@ return [
             'route'=> 'comments.index',
             'icon' => 'fas fa-poll',
             'active' => ['admin/comments*'],
+            'can'    => 'comments.index'
+        ],
+        [
+            'text' => 'Usuarios',
+            'route'=> 'users.index',
+            'icon' => 'fas fa-users',
+            'active' => ['admin/users*'],
+            'can'    => 'users.index'
+        ],
+        [
+            'text' => 'Roles',
+            'route'=> 'roles.index',
+            'icon' => 'fas fa-lock',
+            'active' => ['admin/roles*'],
+            'can'    => 'roles.index'
         ],
 
 

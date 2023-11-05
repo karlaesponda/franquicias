@@ -47,7 +47,8 @@ class FranquiciaPolicy
      */
     public function delete(User $user, Franquicia $franquicia)
     {
-        //
+        //Revisar si el usuario autenticado es el mismo que creó la franquicia
+        return $user->id == $franquicia->user_id;
     }
 
     /**

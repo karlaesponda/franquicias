@@ -11,16 +11,20 @@ use App\Http\Requests\CommentRequest;
 
 class CommentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    //proteger rutas
+    public function __construct()
+    {
+        $this->middleware('can:comments.index')->only('index');
+        $this->middleware('can:comments.destroy')->only('destroy');
+    }
+
     public function index()
     {
         //
         $comments = DB::table('comments')
-                    ->join('franquicias', 'comments.franquicias_id', '=', 'franquicias.id')
+                    ->join('franquicias', 'comments.franquicia_id', '=', 'franquicias.id')
                     ->join('users', 'comments.user_id', '=', 'users.id')
-                    ->select('comments.value', 'comments.description',
+                    ->select('comments.id', 'comments.value', 'comments.descripcion',
                     'franquicias.title', 'users.name')
                     ->where('franquicias.user_id', '=', Auth::user()->id)
                     ->orderBy('franquicias.id', 'desc')
@@ -43,6 +47,7 @@ class CommentController extends Controller
      */
     public function store(CommentRequest $request)
     {
+        $this->authorize('create', Comment::class);
         //Verificar si en la franquicia ya existe un comentario del usuario
         $result = Comment::where('user_id', Auth::user()->id)
                             ->where('franquicia_id', $request->franquicia_id)->exists();

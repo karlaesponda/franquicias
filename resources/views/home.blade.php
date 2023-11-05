@@ -1,6 +1,18 @@
 
 @extends('layouts.base')
-
+@section('styles')
+<!-- 
+<link rel="stylesheet" href="{{asset('css/login/css/login.css')}}">
+<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        
+        <link href="{{asset('css/show/css/styles.css')}}" rel="stylesheet" />
+        -->
+@endsection
 
 @section('content')
 

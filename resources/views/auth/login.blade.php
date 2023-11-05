@@ -7,7 +7,7 @@
 @section('title', 'Ingresar')
 
 @section('content')
-
+ 
 
 <form method="POST" class="form" action="{{route('login')}}">
     @csrf

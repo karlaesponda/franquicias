@@ -26,7 +26,9 @@ Route::get('/all',[HomeController::class, 'all'])->name('home.all');
 Route::get('sobre_nosotros', [HomeController::class, 'sobre_nosotros'])->name('sobre_nosotros.index');
 
 //Admin
-Route::get('/admin', [AdminController::class,'index'])->name('admin.index');
+Route::get('/admin', [AdminController::class,'index'])
+                    ->middleware('can:admin.index')
+                    ->name('admin.index');
 
 //Rutas del admin
 Route::namespace('App\Http\Controllers')->prefix('admin')->group(function () {
@@ -39,6 +41,15 @@ Route::namespace('App\Http\Controllers')->prefix('admin')->group(function () {
                 ->only('index', 'destroy')
                 ->names('comments');
 
+    //Usuarios
+    Route::resource('users', 'UserController')
+                    ->except('create', 'store', 'show')
+                    ->names('users');
+
+    //Roles
+    Route::resource('roles', 'RoleController')
+                    ->except('show')
+                    ->names('roles');
 });
 
 

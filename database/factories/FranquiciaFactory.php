@@ -29,7 +29,7 @@ class FranquiciaFactory extends Factory
             'num_sucursales' => $this->faker->numberBetween(1, 100),
             'marca_registrada' => $this->faker->boolean,
             'costo_marca' => $this->faker->randomFloat(2, 1000, 100000),
-            'logotipo' => 'franquicias/'.$this->faker->image('public/storage/franquicias', 640, 480, null, false),
+            'logotipo' => 'franquicias/'.$this->faker->image('public/storage/franquicias', 700, 575, null, false),
             'tipo_restaurante' => $this->faker->word,
             'website' => $this->faker->url,
             'facebook' => $this->faker->url,

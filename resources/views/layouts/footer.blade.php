@@ -13,7 +13,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="logo">
-                <img src="{{ asset('img/dauroweb-logo.png') }}" alt="Mi Foto">
+                <img src="{{ asset('img/logo-CF-footer.png') }}" alt="Mi Foto">
                 </div>
             </div>
             <div class="col-lg-4 col-xs-12">

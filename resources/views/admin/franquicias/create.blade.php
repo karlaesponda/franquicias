@@ -110,13 +110,13 @@
                 <div class="form-check form-check-inline">
                     <label class="form-check-label" for="">Sí</label>
                     <input class="form-check-input ml-2" type="radio" name='marca_registrada' 
-                    id="marca_registrada" value="0" checked>
+                    id="marca_registrada" value="1" checked>
                 </div>
 
                 <div class="form-check form-check-inline">
                     <label class="form-check-label" for="">No</label>
                     <input class="form-check-input ml-2" type="radio" name='marca_registrada' 
-                    id="marca_registrada" value="1">
+                    id="marca_registrada" value="0">
                 </div>
 
                 @error('marca_registrada')
