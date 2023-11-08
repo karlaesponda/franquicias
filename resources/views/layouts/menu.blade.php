@@ -14,6 +14,8 @@
                     <ul class="nav">
                         <li class="me-2"><a href="{{route('home.index')}}" class="login">Inicio</a></li>
                         <br>
+                        <li class="scroll-to-section"><a href= "{{ route('sobre_nosotros.index')}}" >Sobre nosotros</a></li>
+                        <li class="scroll-to-section"><a href= "{{ route('franquicias.lista')}}">Franquicias</a></li>
                         <li class="me-2"><a href="{{route('login')}}" class="login">Acceder</a></li>
                         <br>
                         <li><a href="{{route('register')}}" class="create">Crear cuenta</a></li>

@@ -53,18 +53,7 @@
 
         </div>
 
-        <div class="input-content">
-            <input type="text" name="cp" placeholder="CP"
-                value="{{old('cp')}}" 
-                autofocus>
 
-            @error('cp')
-            <span class="alert-red">
-                <span>*{{$message}}</span>
-            </span>                
-            @enderror
-
-        </div>
 
         <div class="input-content">
             <input type="text" name="telefono" placeholder="Teléfono"
@@ -92,21 +81,6 @@
 
         </div>
 
-        <div class="input-content">
-            <input type="password" name="password" placeholder="Contraseña">
-
-            @error('password')
-            <span class="alert-red">
-                <span>*{{$message}}</span>
-            </span>                
-            @enderror
-
-        </div>
-
-        <div class="input-content">
-            <input type="password" name="password_confirmation" placeholder="Confirmar contraseña">
-        </div>
-    </div>
 
     <input type="submit" value="Registrarse" class="button">
     <p>¿Ya tienes una cuenta? <a href="{{route('login')}}" class="link">Iniciar sesión</a></p>

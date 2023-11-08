@@ -44,6 +44,12 @@ return new class extends Migration
             $table->text('servicio_cliente');
             $table->text('gestion');
             $table->text('tecnologia');
+            $table->string('numero_contacto_1');
+            $table->string('numero_contacto_2');
+            $table->string('email_1');
+            $table->string('email_2');
+            
+
             $table->timestamps();
 
             //relacion 1 A 1 con usuario

@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('styles')
-<link rel="stylesheet" href="{{asset('css/login/css/login.css')}}">
+<link rel="stylesheet" href="{{asset('css/manage_post/comments/css/comments.css')}}">
 <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -52,17 +52,17 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
-                    <li class="resume-section"><a class="nav-link js-scroll-trigger" href="#sobre_nosotros"><i class="fas fa-home nav-icon"></i>Sobre nosotros</a></i>
+                    <li class="resume-section"><a class="nav-link js-scroll-trigger" href="#sobre_nosotros"><i class="fas fa-home nav-icon"></i>   Sobre nosotros</a></i>
                     <br>
-                    <li class="resume-section"><a class="nav-link js-scroll-trigger" href="#modelo"><i class="fas fa-briefcase nav-icon"></i>Modelo de Negocio</a></li>
+                    <li class="resume-section"><a class="nav-link js-scroll-trigger" href="#modelo"><i class="fas fa-briefcase nav-icon"></i>   Modelo de Negocio</a></li>
                     <br>
-                    <li class="resume-section"><a class="nav-link js-scroll-trigger" href="#finanzas"><i class="fas fa-money-bill nav-icon"></i>Finanzas</a></li>
+                    <li class="resume-section"><a class="nav-link js-scroll-trigger" href="#finanzas"><i class="fas fa-money-bill nav-icon"></i>   Finanzas</a></li>
                     <br>
-                    <li class="resume-section"><a class="nav-link js-scroll-trigger" href="#soporte"><i class="fas fa-clipboard nav-icon"></i>Soporte y entrenamiento</a></li>
+                    <li class="resume-section"><a class="nav-link js-scroll-trigger" href="#soporte"><i class="fas fa-clipboard nav-icon"></i>   Soporte y entrenamiento</a></li>
                     <br>
-                    <li class="resume-section"><a class="nav-link js-scroll-trigger" href="#resenas"><i class="fas fa-money-bill nav-icon"></i>Reseñas</a></li>
+                    <li class="resume-section"><a class="nav-link js-scroll-trigger" href="#contacto"><i class="fas fa-envelope nav-icon"></i>   Contacto</a></li>
                     <br>
-                    <li class="resume-section"><a class="nav-link js-scroll-trigger" href="#contacto"><i class="fas fa-envelope nav-icon"></i>Contacto</a></li>
+                    <li class="resume-section"><a class="nav-link js-scroll-trigger" href="#resenas"><i class="fas fa-money-bill nav-icon"></i>   Reseñas</a></li>
                     <br>
                 </ul>
             </div>
@@ -129,7 +129,7 @@
             <section class="resume-section" id="soporte">
                 <div class="info-section">
                     <h1 class="mb-0 section-heading">
-                        Soporte y Entrenamiento 
+                        Soporte y Entrenamiento  
                     </h1><br><br>
                     <h4>Soporte</h4>
                     <p class="lead mb-5" style="text-align: left;">{{$franquicia->soporte}}</p>
@@ -149,6 +149,29 @@
                     <p class="lead mb-5" style="text-align: left;">{{$franquicia->gestion}}</p>
                     <h5>- Tecnología y Sistemas:</h5>
                     <p class="lead mb-5" style="text-align: left;">{{$franquicia->tecnologia}}</p>
+                </div> 
+            </section>
+
+
+            <!-- Contacto-->
+            <hr class="m-0" />
+            <section class="resume-section" id="contacto">
+                <div class="info-section">
+                    <h1 class="mb-0 section-heading">
+                        Contacto  
+                    </h1><br><br>
+                    <h4>Número de contacto</h4>
+                    <p class="lead mb-5" style="text-align: left;">{{$franquicia->numero_contacto_1}}</p>
+                    <p class="lead mb-5" style="text-align: left;">{{$franquicia->numero_contacto_2}}</p>
+                    <h4>Correo electrónico de contacto</h4>
+                    <p class="lead mb-5" style="text-align: left;">{{$franquicia->email_1}}</p>
+                    <p class="lead mb-5" style="text-align: left;">{{$franquicia->email_2}}</p>
+                    <h4>Página Web</h4>
+                    <p class="lead mb-5" style="text-align: left;">{{$franquicia->website}}</p>
+                    <h4>Facebook</h4>
+                    <p class="lead mb-5" style="text-align: left;">{{$franquicia->facebook}}</p>
+                    <h4>Instagram</h4>
+                    <p class="lead mb-5" style="text-align: left;">{{$franquicia->instagram}}</p>
                 </div> 
             </section>
 

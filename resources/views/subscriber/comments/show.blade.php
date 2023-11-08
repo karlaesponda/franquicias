@@ -1,3 +1,6 @@
+@section('styles')
+<link rel="stylesheet" href="{{asset('css/manage_post/comments/css/comments.css')}}">
+@endsection
 <div class="comments-content">
     @foreach($comments as $comment)
     <div class="comments-body">

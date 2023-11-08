@@ -122,7 +122,7 @@
                     <label class="form-check-label">No</label>
                     <input class="form-check-input ml-2" type="radio" name='marca_registrada' id="marca_registrada" value="0">
                 </div>
-
+ 
                 @error('marca_registrada')
                 <span class="text-danger">
                     <span>*{{$message}}</span>
@@ -166,6 +166,58 @@
                 minlength="5" maxlength="255" value="{{$franquicia->tipo_restaurante}}">
        
                 @error('tipo_restaurante')
+                <span class="text-danger">
+                    <span>*{{$message}}</span>
+                </span>
+                @enderror
+               
+            </div>
+
+            <div class="form-group">
+                <label>Número de contacto</label>
+                <input type="text" class="form-control" id="numero_contacto_1" name='numero_contacto_1' 
+                value="{{$franquicia->numero_contacto_1}}">
+       
+                @error('numero_contacto_1')
+                <span class="text-danger">
+                    <span>*{{$message}}</span>
+                </span>
+                @enderror
+               
+            </div>
+
+            <div class="form-group">
+                <label>Número de contacto secundario</label>
+                <input type="text" class="form-control" id="numero_contacto_2" name='numero_contacto_2' 
+                value="{{$franquicia->numero_contacto_2}}">
+       
+                @error('numero_contacto_2')
+                <span class="text-danger">
+                    <span>*{{$message}}</span>
+                </span>
+                @enderror
+               
+            </div>
+
+            <div class="form-group">
+                <label>Correo electrónico</label>
+                <input type="text" class="form-control" id="email_1" name='email_1' 
+                value="{{$franquicia->email_1}}">
+       
+                @error('email_1')
+                <span class="text-danger">
+                    <span>*{{$message}}</span>
+                </span>
+                @enderror
+               
+            </div>
+
+            <div class="form-group">
+                <label>Correo electrónico secundario</label>
+                <input type="text" class="form-control" id="email_2" name='email_2' 
+                value="{{$franquicia->email_2}}">
+       
+                @error('email_2')
                 <span class="text-danger">
                     <span>*{{$message}}</span>
                 </span>

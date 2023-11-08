@@ -168,6 +168,61 @@
 
             </div>
 
+            <div class="form-group">
+                <label>Número de contacto</label>
+                <input type="text" class="form-control" id="numero_contacto_1" name='numero_contacto_1'
+                    placeholder="Ingrese el número de contacto" 
+                    value="{{old('numero_contacto_1')}}">
+
+                @error('numero_contacto_1')
+                <span class="text-danger">
+                    <span>* {{$message}}</span>
+                </span>
+                @enderror
+
+            </div>
+
+            <div class="form-group">
+                <label>Número de contacto secundario</label>
+                <input type="text" class="form-control" id="numero_contacto_2" name='numero_contacto_2'
+                    placeholder="Ingrese el número de contacto secundario (opcional)" 
+                    value="{{old('numero_contacto_2')}}">
+
+                @error('numero_contacto_2')
+                <span class="text-danger">
+                    <span>* {{$message}}</span>
+                </span>
+                @enderror
+
+            </div>
+
+            <div class="form-group">
+                <label>Correo electrónico de contacto</label>
+                <input type="text" class="form-control" id="email_1" name='email_1'
+                    placeholder="Ingrese el correo electrónico de contacto" minlength="5" maxlength="255"
+                    value="{{old('email_1')}}">
+
+                @error('email_1')
+                <span class="text-danger">
+                    <span>* {{$message}}</span>
+                </span>
+                @enderror
+
+            </div>
+
+            <div class="form-group">
+                <label>Correo electrónico de contacto secundario</label>
+                <input type="text" class="form-control" id="email_2" name='email_2'
+                    placeholder="Ingrese el correo electrónico de contacto secundario (opcional)" minlength="5" maxlength="255"
+                    value="{{old('email_2')}}">
+
+                @error('email_2')
+                <span class="text-danger">
+                    <span>* {{$message}}</span>
+                </span>
+                @enderror
+
+            </div>
 
             <div class="form-group">
                 <label>Sitio Web</label>
@@ -354,7 +409,7 @@
                 <input type="text" class="form-control" id="diseno_tienda" name='diseno_tienda'
                     placeholder="Describa lo que ofrece sobre diseño en tienda y construcción" minlength="5" maxlength="255"
                     value="{{old('diseno_tienda')}}">
-
+ 
                 @error('diseno_tienda')
                 <span class="text-danger">
                     <span>* {{$message}}</span>

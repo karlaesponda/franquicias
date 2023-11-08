@@ -42,7 +42,7 @@ class FranquiciaRequest extends FormRequest
             'tipo_restaurante' => 'required',
             'website' => 'required',
             'facebook' => 'required',
-            'instagram' => 'required',
+            'instagram' => '',
             'descripcion' => 'required',
             'historia' => 'required',
             'mision' => 'required',
@@ -52,7 +52,19 @@ class FranquiciaRequest extends FormRequest
             'menu' => request()->isMethod('put') ? 'nullable|file|mimetypes:application/pdf,application/msword|max:2048' : 'required|file|mimetypes:application/pdf,application/msword|max:2048',
             'inf_financiera' => request()->isMethod('put') ? 'nullable|file|mimetypes:application/pdf,application/msword|max:2048' : 'required|file|mimetypes:application/pdf,application/msword|max:2048',
             'soporte' => 'required',
+            'asesoramiento_ubi' => 'required',
+            'diseno_tienda' => 'required',
+            'marketing' => 'required',
             'entrenamiento' => 'required',
+            'preparacion' => 'required',
+            'servicio_cliente' => 'required',
+            'gestion' => 'required',
+            'tecnologia' => 'required',
+            'numero_contacto_1' => 'required',
+            'numero_contacto_2' => '',
+            'email_1' => 'required',
+            'email_2' => '',
+
         ];
     }
 }

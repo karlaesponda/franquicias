@@ -51,6 +51,10 @@ class FranquiciaFactory extends Factory
             'servicio_cliente' => $this->faker->paragraph,
             'gestion' => $this->faker->paragraph,
             'tecnologia' => $this->faker->paragraph,
+            'email_1' => $this->faker->text,
+            'email_2' => $this->faker->text,
+            'numero_contacto_1' => $this->faker->numberBetween(1, 10),
+            'numero_contacto_2' => $this->faker->numberBetween(1, 10),
             'user_id' => User::all()->random()->id,
         ];
     }

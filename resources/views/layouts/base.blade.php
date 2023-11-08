@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
-
+    
 
     <!-- jQuery -->
     <script src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="{{ asset('css/base/css/templatemo-klassy-cafe.css') }}">
     <link rel="stylesheet" href="{{ asset('css/base/css/owl-carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('css/base/css/lightbox.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/base/css/templatemo-upright.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('css/base/css/templatemo-upright.css') }}"> -->
     <link rel="stylesheet" href="{{ asset('css/base/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/base/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('css/base/css/flex-slider.css') }}">
