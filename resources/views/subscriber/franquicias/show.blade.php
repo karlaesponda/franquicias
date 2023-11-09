@@ -88,6 +88,7 @@
 
             <!-- Modelo de negocio-->
             <hr class="m-0" />
+            @if(\Auth::user()->can('viewAll',\Auth::user()))
             <section class="resume-section" id="modelo">
                 <div class="info-section">
                     <h1 class="mb-0 section-heading">
@@ -105,7 +106,7 @@
 
                 </div> 
             </section>
-
+            
             <!-- Finanzas-->
             <hr class="m-0" />
             <section class="resume-section" id="finanzas">
@@ -174,7 +175,7 @@
                     <p class="lead mb-5" style="text-align: left;">{{$franquicia->instagram}}</p>
                 </div> 
             </section>
-
+            @endif
             <!-- Reseñas-->
             <hr class="m-0" />
             <section class="resume-section" id="resenas">

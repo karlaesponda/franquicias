@@ -352,7 +352,13 @@ return [
             'active' => ['admin/roles*'],
             'can'    => 'roles.index'
         ],
-
+        [
+            'text' => 'Suscripciones',
+            'route'=> 'subs.payment',
+            'icon' => 'fas fa-poll',
+            'active' => ['admin/subscriptions*'],
+            'can'    => 'franquicias.index'
+        ],
 
     ],
 

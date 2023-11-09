@@ -42,11 +42,7 @@
 
         <div class="input-content">
             <input type="text" name="nip" placeholder="NIP (3 dígitos)"
-                value="{{ old('nip') }}"
-                autofocus
-                pattern="[0-9]{4}"  <!-- Solo permite números y debe tener 4 dígitos -->
-                maxlength="3"  <!-- Limita la longitud del campo a 4 caracteres -->
-                required> <!-- Hace que el campo sea obligatorio -->
+                value="{{ old('nip') }}" autofocus pattern="[0-9]{3}" maxlength="3" required> 
 
             @error('nip')
             <span class="alert-red">
@@ -57,15 +53,15 @@
 
 
         <div class="input-content">
-            <input type="text" name="cp" placeholder="CP"
-                value="{{old('cp')}}" 
-                autofocus>
+            <input type="text" name="name" placeholder="Nombre completo"
+                value="{{old('name')}}" autofocus>
 
-            @error('cp')
+            @error('name')
             <span class="alert-red">
                 <span>*{{$message}}</span>
-            </span>                
+            </span> 
             @enderror
+
 
         </div>
 
@@ -106,12 +102,10 @@
 
         </div>
 
-        <div class="input-content">
-            <input type="password" name="password_confirmation" placeholder="Confirmar contraseña">
-        </div>
+
     </div>
 
-    <input type="submit" value="Registrarse" class="button">
-    <p>¿Ya tienes una cuenta? <a href="{{route('login')}}" class="link">Iniciar sesión</a></p>
+    <input type="submit" value="Efectuar pago" class="button">
+    <p><a href="#" class="link">Iniciar sesión</a></p>
 </form>
 @endsection

@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FranquiciaController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 Route::get('/all',[HomeController::class, 'all'])->name('home.all');
 Route::get('sobre_nosotros', [HomeController::class, 'sobre_nosotros'])->name('sobre_nosotros.index');
+
 
 //Admin
 Route::get('/admin', [AdminController::class,'index'])
@@ -50,9 +52,16 @@ Route::namespace('App\Http\Controllers')->prefix('admin')->group(function () {
     Route::resource('roles', 'RoleController')
                     ->except('show')
                     ->names('roles');
+
+    Route::resource('subscriptions', 'PaymentController')
+                    ->names('payments');
+
+
 });
 
-
+Route::get('subs', [PaymentController::class, 'checkout'])->name('subs.payment');
+Route::get('success', [PaymentController::class, 'success'])->name('success');
+Route::post('payment', [PaymentController::class, 'payment']);
 
 //Ver franquicias
 Route::get('franquicia/{id}', [FranquiciaController::class, 'show'])->name('franquicias.show');
