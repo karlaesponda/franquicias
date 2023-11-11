@@ -9,6 +9,8 @@
 @section('content')
     <p>¡Hola {{Auth::user()->name}}! En este panel podrás 
         administrar tus franquicias y comentarios.</p>
+
+        <h4> Para administrar tus franquicias y acceder a los comentarios ¡Adquiere una suscripción!</h4>
 @stop
 
 @section('css')

@@ -45,7 +45,7 @@ class PaymentController extends Controller
             'line_items'  => [
                 [
                     'price_data' => [
-                        'currency'     => 'USD',
+                        'currency'     => 'MXN',
                         'product_data' => [
                             "name" => $productname,
                         ],

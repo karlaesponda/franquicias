@@ -20,18 +20,19 @@ class CommentController extends Controller
 
     public function index()
     {
-        //
+        // Utiliza el método authorize para verificar el permiso
+        $this->authorize('viewAllComments', Auth::user());
+    
+        // Si llegamos aquí, el usuario tiene el permiso necesario
         $comments = DB::table('comments')
                     ->join('franquicias', 'comments.franquicia_id', '=', 'franquicias.id')
                     ->join('users', 'comments.user_id', '=', 'users.id')
-                    ->select('comments.id', 'comments.value', 'comments.descripcion',
-                    'franquicias.title', 'users.name')
+                    ->select('comments.id', 'comments.value', 'comments.descripcion', 'franquicias.title', 'users.name')
                     ->where('franquicias.user_id', '=', Auth::user()->id)
                     ->orderBy('franquicias.id', 'desc')
                     ->get();
-
+    
         return view('admin.comments.index', compact('comments'));
-            
     }
 
     /**

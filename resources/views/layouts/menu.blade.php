@@ -26,7 +26,9 @@
                         <li class="scroll-to-section"><a href= "{{ route('home.index')}}" class="active">Inicio</a></li>
                         <li class="scroll-to-section"><a href= "{{ route('sobre_nosotros.index')}}" class="active">Sobre nosotros</a></li>
                         <li class="scroll-to-section"><a href= "{{ route('franquicias.lista')}}" class="active">Franquicias</a></li>
-                        <li class="scroll-to-section"><a href="#reservation">Registrate</a></li>
+                        @if (\Auth::check() && !\Auth::user()->can('viewAll', \Auth::user()))
+                        <li class="scroll-to-section"><a href= "{{ route('subs.payment')}}" class="active">Suscríbete</a></li>
+                        @endif
                         @can('admin.index')
                         <li class="scroll-to-section"><a href= "{{ route('admin.index')}}" class="active">Ir al admin</a></li>
                         @endcan

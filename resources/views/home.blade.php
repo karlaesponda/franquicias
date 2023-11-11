@@ -1,17 +1,20 @@
 
 @extends('layouts.base')
 @section('styles')
-<!-- 
-<link rel="stylesheet" href="{{asset('css/login/css/login.css')}}">
-<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        
-        <link href="{{asset('css/show/css/styles.css')}}" rel="stylesheet" />
-        -->
+ 
+    <link rel="stylesheet" href="{{asset('css/login/css/login.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/base/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/base/css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/base/css/templatemo-klassy-cafe.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/base/css/owl-carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/base/css/lightbox.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/base/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/base/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/base/css/flex-slider.css') }}">
+    <link rel="stylesheet" href="{{asset('css/base/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/base/css/slick.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/base/css/slick-theme.css') }}">
+
 @endsection
 
 @section('content')
@@ -26,7 +29,8 @@
                             <h4>Franquicias</h4>
                             <h6>Plataforma para vender o comprar Franquicias</h6>
                             <div class="main-white-button scroll-to-section">
-                                <a href="#reservation">Conoce más</a>
+                                <a href="{{ route('sobre_nosotros.index')}}">Conoce más</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -40,20 +44,7 @@
                             <img src="{{ asset('img/slide-01.jpg') }}" alt="Mi Foto">
                             </div>
                           </div>
-                          <!-- // Item -->
-                          <!-- Item -->
-                          <div class="item">
-                            <div class="img-fill">
-                            <img src="{{ asset('img/slide-02.jpg') }}" alt="Mi Foto">
-                            </div>
-                          </div>
-                          <!-- // Item -->
-                          <!-- Item -->
-                          <div class="item">
-                            <div class="img-fill">
-                            <img src="{{ asset('img/slide-02.jpg') }}" alt="Mi Foto">
-                            </div>
-                          </div>
+   
                           <!-- // Item -->
                         </div>
                     </div>
@@ -251,97 +242,68 @@
         </div>
     </section>
     <!-- ***** Chefs Area Ends ***** -->
+    <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div>
 
-    <!-- ***** Reservation Us Area Starts ***** -->
-    <section class="section" id="reservation">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 align-self-center">
-                    <div class="left-text-content">
-                        <div class="section-heading">
-                            <h6>Registrate</h6>
-                            <h2>Crea un usuario para obtener información completa...</h2>
-                        </div>
-                        <p>si quieres vender o comprar una franquicia primero debes registrarte para acceder a todas las funcionalidades de la plataforma</p>
-                        <p>si necesitas ayuda o más información sobre el proceso, contáctanos</p>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="phone">
-                                    <i class="fa fa-phone"></i>
-                                    <h4>Número de teléfono</h4>
-                                    <span><a href="#">000-000-000</a><br><a href="#">000-000-000</a></span>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="message">
-                                    <i class="fa fa-envelope"></i>
-                                    <h4>Email</h4>
-                                    <span><a href="#">contactanos@dauroweb.com</a><br><a href="#">contactanos2@dauroweb.com</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="contact-form">
-                        <form id="contact" action="" method="post">
-                          <div class="row">
-                            <div class="col-lg-12">
-                                <h4>Ingresa los siguientes datos</h4>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                              <fieldset>
-                                <input name="name" type="text" id="name" placeholder="Your Name*" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                              <fieldset>
-                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
-                            </fieldset>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                              <fieldset>
-                                <input name="phone" type="text" id="phone" placeholder="Phone Number*" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <select value="number-guests" name="number-guests" id="number-guests">
-                                    <option value="number-guests">Rol</option>
-                                    <option name="1" id="1">Venta</option>
-                                    <option name="2" id="2">Compra</option>
-                                </select>
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-6">
-                                <div id="filterDate2">    
-                                  <div class="input-group date" data-date-format="dd/mm/yyyy">
-                                    <input  name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy">
-                                    <div class="input-group-addon" >
-                                      <span class="glyphicon glyphicon-th"></span>
-                                    </div>
-                                  </div>
-                                </div>   
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                            <p> </p>
-                            </div>
-
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <button type="submit" id="form-submit" class="main-button-icon">Registrarse</button>
-                              </fieldset>
-                            </div>
-                          </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Reservation Area Ends ***** -->
 @endsection
+<script src="{{ asset('js/custom.js')}}"></script>
 
+<script src="{{ asset('js/owl-carousel.js')}}"></script>
+<script src="{{ asset('js/accordions.js')}}"></script>
+<script src="{{ asset('js/datepicker.js')}}"></script>
+<script src="{{ asset('js/scrollreveal.min.js')}}"></script>
+<script src="{{ asset('js/waypoints.min.js')}}"></script>
+<script src="{{ asset('js/jquery.counterup.min.js')}}"></script>
+<script src="{{ asset('js/imgfix.min.js')}}"></script> 
+<script src="{{ asset('js/slick.js')}}"></script> 
+<script src="{{ asset('js/lightbox.js')}}"></script> 
+<script src="{{ asset('js/isotope.js')}}"></script> 
+
+<!-- script franquicia -->
+<script src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>         
+<script src="{{ asset('js/jquery.singlePageNav.min.js')}}"></script>  
+<script src="{{ asset('js/parallax.min.js')}}"></script>    
+<script src="{{ asset('js/imagesloaded.pkgd.min.js')}}"></script>     
+<script src="{{ asset('js/isotope.pkgd.min.js')}}"></script>          
+<script src="{{ asset('js/jquery.magnific-popup.min.js')}}"></script> 
+<script src="{{ asset('js/slick.min.js')}}"></script>             
+<script src="{{ asset('js/templatemo-script.js')}}"></script>
 
 <!--
 <div class="container">

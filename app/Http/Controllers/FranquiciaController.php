@@ -21,15 +21,17 @@ class FranquiciaController extends Controller
 
     public function index()
     {
-        //Mostrar las franquicias en el admin
+        // Utiliza el método authorize para verificar el permiso
+        $this->authorize('viewAll', Auth::user());
+    
+        // Si llegamos aquí, el usuario tiene el permiso necesario
         $user = Auth::user();
         $franquicias = Franquicia::where('user_id', $user->id)
-                        ->orderBy('id','desc')
+                        ->orderBy('id', 'desc')
                         ->simplePaginate(10);
-        return view('admin.franquicias.index', compact('franquicias'));
     
+        return view('admin.franquicias.index', compact('franquicias'));
     }
-
     /**
      * Show the form for creating a new resource.
      */

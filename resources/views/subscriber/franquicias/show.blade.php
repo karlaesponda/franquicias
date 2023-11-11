@@ -44,6 +44,33 @@
         text-transform: none;
         text-align: left;
     }
+    .window-notice {
+    background: rgba(33, 41, 52, .85);
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+.window-notice .content {
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    min-width: 320px !important;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem;
+    font-size: 1.3rem;
+    align-items: center;
+}
 
 </style>
         <!-- Navigation-->
@@ -85,10 +112,31 @@
                     <p class="lead mb-5" style="text-align: left;">{{$franquicia->vision}}</p>
                 </div> 
             </section>
+            @if (\Auth::check() && !\Auth::user()->can('viewAll', \Auth::user()))
+            <div class="window-notice" id="window-notice" style="display: none;">
+                <div class="content">
+                    <div class="content-text">Para visualizar todo el contenido y contactar a las franquicias adquiera una suscripción. 
+                    <br>
+                    <a href="{{route('register')}}">Adquirir suscripción</a></div>
+                    <div class="content-buttons"><a href="#" id="close-button">Aceptar</a></div>
+                </div>
+            </div>
+            @endif
 
+            @if (!\Auth::check())
+            <div class="window-notice" id="window-notice" style="display: none;">
+                <div class="content">
+                    <div class="content-text">Para visualizar todo el contenido y contactar a las franquicias adquiera una suscripción. 
+                    <br>
+                    <a href="{{route('register')}}">Adquirir suscripción</a></div>
+                    <div class="content-buttons"><a href="#" id="close-button">Aceptar</a></div>
+                </div>
+            </div>
+            @endif
             <!-- Modelo de negocio-->
             <hr class="m-0" />
-            @if(\Auth::user()->can('viewAll',\Auth::user()))
+            @if (\Auth::check() && \Auth::user()->can('viewAll', \Auth::user()))
+
             <section class="resume-section" id="modelo">
                 <div class="info-section">
                     <h1 class="mb-0 section-heading">
@@ -210,6 +258,20 @@
         <!-- Core theme JS-->
         
         <script src="{{ asset('js/scripts.js')}}"></script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function () {
+            // Muestra la ventana emergente después de 5 segundos
+            document.getElementById('window-notice').style.display = 'block';
+        }, 5000);
+        
+        // Agrega un evento al botón de cierre para cerrar la ventana emergente
+        document.getElementById('close-button').addEventListener('click', function () {
+            document.getElementById('window-notice').style.display = 'none';
+        });
+        });
+        </script>
 @endsection
 
 

@@ -10,6 +10,13 @@
     border-left: 2px solid #fb5849; /* Ajusta el grosor y el color del borde según tus preferencias */
     
 }
+.div-con-color {
+    background-color: #fb5849;
+    color: #fff;
+    padding: 20px; /* Ajusta el relleno según sea necesario */
+    border-radius: 10px; /* Añade esquinas redondeadas si deseas */
+    
+}
 
 
 </style>
@@ -33,7 +40,7 @@
             </div>
         </div>
 
-        <div class="container py-5">
+        <div class="div-con-color">
             <h1> ¿Cómo funciona Culinary Finder?</h1>
             <p>Es sencillo. Para adquirir una franquicia, todo lo que necesitas hacer es ponerte en contacto 
             directamente con el franquiciador. Sin embargo, para acceder a la información de contacto de las 

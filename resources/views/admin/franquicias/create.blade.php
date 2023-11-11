@@ -14,7 +14,7 @@
             <div class="form-group">
                 <label for="">Título</label>
                 <input type="text" class="form-control" id="title" name='title'
-                    placeholder="Ingrese el nombre de la franquicia" minlength="5" maxlength="255" 
+                    placeholder="Ingrese el nombre de la franquicia" minlength="5"   maxlength="255"
                     value="{{old('title')}}">
 
                 @error('title')
@@ -28,7 +28,7 @@
             <div class="form-group">
                 <label for="">Nombre del Restaurante</label>
                 <input type="text" class="form-control" id="nombre_restaurante" name='nombre_restaurante'
-                    placeholder="Ingrese el nombre del restaurante" minlength="5" maxlength="255" 
+                    placeholder="Ingrese el nombre del restaurante" minlength="5"   
                     value="{{old('nombre_restaurante')}}">
 
  
@@ -185,7 +185,7 @@
             <div class="form-group">
                 <label>Número de contacto secundario</label>
                 <input type="text" class="form-control" id="numero_contacto_2" name='numero_contacto_2'
-                    placeholder="Ingrese el número de contacto secundario (opcional)" 
+                    placeholder="Ingrese el número de contacto secundario" 
                     value="{{old('numero_contacto_2')}}">
 
                 @error('numero_contacto_2')
@@ -213,7 +213,7 @@
             <div class="form-group">
                 <label>Correo electrónico de contacto secundario</label>
                 <input type="text" class="form-control" id="email_2" name='email_2'
-                    placeholder="Ingrese el correo electrónico de contacto secundario (opcional)" minlength="5" maxlength="255"
+                    placeholder="Ingrese el correo electrónico de contacto secundario" minlength="5" maxlength="255"
                     value="{{old('email_2')}}">
 
                 @error('email_2')
@@ -271,7 +271,7 @@
             <div class="form-group">
                 <label>Descripción</label>
                 <input type="text" class="form-control" id="descripcion" name='descripcion'
-                    placeholder="Ingrese la descripción de la franquicia" minlength="5" maxlength="255"
+                    placeholder="Ingrese la descripción de la franquicia" minlength="5" 
                     value="{{old('descripcion')}}">
 
                 @error('descripcion')
@@ -285,7 +285,7 @@
             <div class="form-group">
                 <label>Historia</label>
                 <input type="text" class="form-control" id="historia" name='historia'
-                    placeholder="Ingrese breve historia sobre la franquicia" minlength="5" maxlength="255"
+                    placeholder="Ingrese breve historia sobre la franquicia" minlength="5" 
                     value="{{old('historia')}}">
 
                 @error('historia')
@@ -299,7 +299,7 @@
             <div class="form-group">
                 <label>Misión</label>
                 <input type="text" class="form-control" id="mision" name='mision'
-                    placeholder="Ingrese la misión de su franquicia" minlength="5" maxlength="255"
+                    placeholder="Ingrese la misión de su franquicia" minlength="5" 
                     value="{{old('mision')}}">
 
                 @error('mision')
@@ -313,7 +313,7 @@
             <div class="form-group">
                 <label>Visión</label>
                 <input type="text" class="form-control" id="vision" name='vision'
-                    placeholder="Ingrese la visión de su franquicia" minlength="5" maxlength="255"
+                    placeholder="Ingrese la visión de su franquicia" minlength="5" 
                     value="{{old('vision')}}">
 
                 @error('vision')
@@ -327,7 +327,7 @@
             <div class="form-group">
                 <label>Estándares de Calidad</label>
                 <input type="text" class="form-control" id="estandar_calidad" name='estandar_calidad'
-                    placeholder="Ingrese una descripción sobre los estándares de calidad" minlength="5" maxlength="255"
+                    placeholder="Ingrese una descripción sobre los estándares de calidad" minlength="5"  
                     value="{{old('estandar_calidad')}}">
 
                 @error('estandar_calidad')
@@ -341,7 +341,7 @@
             <div class="form-group">
                 <label>Mercado Meta</label>
                 <input type="text" class="form-control" id="mercado_meta" name='mercado_meta'
-                    placeholder="Describa cuál será su mercado meta" minlength="5" maxlength="255"
+                    placeholder="Describa cuál será su mercado meta" minlength="5"  
                     value="{{old('mercado_meta')}}">
 
                 @error('mercado_meta')
@@ -379,7 +379,7 @@
             <div class="form-group">
                 <label>Soporte</label>
                 <input type="text" class="form-control" id="soporte" name='soporte'
-                    placeholder="Describa el soporte que ofrece al adquirir una de sus franquicias" minlength="5" maxlength="255"
+                    placeholder="Describa el soporte que ofrece al adquirir una de sus franquicias" minlength="5"  
                     value="{{old('soporte')}}">
 
                 @error('soporte')
@@ -393,7 +393,7 @@
             <div class="form-group">
                 <label>Asesoramiento en Ubicación</label>
                 <input type="text" class="form-control" id="asesoramiento_ubi" name='asesoramiento_ubi'
-                    placeholder="Describa lo que ofrece sobre asesoramiento en ubicación" minlength="5" maxlength="255"
+                    placeholder="Describa lo que ofrece sobre asesoramiento en ubicación" minlength="5"  
                     value="{{old('asesoramiento_ubi')}}">
 
                 @error('asesoramiento_ubi')
@@ -407,7 +407,7 @@
             <div class="form-group">
                 <label>Diseño de Tienda y Construcción</label>
                 <input type="text" class="form-control" id="diseno_tienda" name='diseno_tienda'
-                    placeholder="Describa lo que ofrece sobre diseño en tienda y construcción" minlength="5" maxlength="255"
+                    placeholder="Describa lo que ofrece sobre diseño en tienda y construcción" minlength="5"  
                     value="{{old('diseno_tienda')}}">
  
                 @error('diseno_tienda')
@@ -421,7 +421,7 @@
             <div class="form-group">
                 <label>Marketing y Publicidad</label>
                 <input type="text" class="form-control" id="marketing" name='marketing'
-                    placeholder="Describa lo que ofrece sobre marketing y publicidad" minlength="5" maxlength="255"
+                    placeholder="Describa lo que ofrece sobre marketing y publicidad" minlength="5"  
                     value="{{old('marketing')}}">
 
                 @error('marketing')
@@ -435,7 +435,7 @@
             <div class="form-group">
                 <label>Entrenamiento</label>
                 <input type="text" class="form-control" id="entrenamiento" name='entrenamiento'
-                    placeholder="Describa lo que ofrece sobre entrenamiento" minlength="5" maxlength="255"
+                    placeholder="Describa lo que ofrece sobre entrenamiento" minlength="5"  
                     value="{{old('entrenamiento')}}">
 
                 @error('entrenamiento')
@@ -449,7 +449,7 @@
             <div class="form-group">
                 <label>Preparación de Alimentos</label>
                 <input type="text" class="form-control" id="preparacion" name='preparacion'
-                    placeholder="Describa lo que ofrece sobre preparación de alimentos" minlength="5" maxlength="255"
+                    placeholder="Describa lo que ofrece sobre preparación de alimentos" minlength="5"  
                     value="{{old('preparacion')}}">
 
                 @error('preparacion')
@@ -463,7 +463,7 @@
             <div class="form-group">
                 <label>Servicio al Cliente</label>
                 <input type="text" class="form-control" id="servicio_cliente" name='servicio_cliente'
-                    placeholder="Describa lo que ofrece sobre servicio al cliente" minlength="5" maxlength="255"
+                    placeholder="Describa lo que ofrece sobre servicio al cliente" minlength="5"  
                     value="{{old('servicio_cliente')}}">
 
                 @error('servicio_cliente')
@@ -477,7 +477,7 @@
             <div class="form-group">
                 <label>Gestión de Negocios</label>
                 <input type="text" class="form-control" id="gestion" name='gestion'
-                    placeholder="Describa lo que ofrece sobre gestión de negocios" minlength="5" maxlength="255"
+                    placeholder="Describa lo que ofrece sobre gestión de negocios" minlength="5"  
                     value="{{old('gestion')}}">
 
                 @error('gestion')
@@ -491,7 +491,7 @@
             <div class="form-group">
                 <label>Tecnología y Sistemas</label>
                 <input type="text" class="form-control" id="tecnologia" name='tecnologia'
-                    placeholder="Describa lo que ofrece sobre tecnología y sistemas" minlength="5" maxlength="255"
+                    placeholder="Describa lo que ofrece sobre tecnología y sistemas" minlength="5"  
                     value="{{old('tecnologia')}}">
 
                 @error('tecnologia')

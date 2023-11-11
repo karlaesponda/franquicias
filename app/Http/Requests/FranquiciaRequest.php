@@ -49,8 +49,8 @@ class FranquiciaRequest extends FormRequest
             'vision' => 'required',
             'estandar_calidad' => 'required',
             'mercado_meta' => 'required',
-            'menu' => request()->isMethod('put') ? 'nullable|file|mimetypes:application/pdf,application/msword|max:2048' : 'required|file|mimetypes:application/pdf,application/msword|max:2048',
-            'inf_financiera' => request()->isMethod('put') ? 'nullable|file|mimetypes:application/pdf,application/msword|max:2048' : 'required|file|mimetypes:application/pdf,application/msword|max:2048',
+            'menu' => request()->isMethod('put') ? 'nullable|file|mimetypes:application/pdf,application/msword' : 'required|file|mimetypes:application/pdf,application/msword',
+            'inf_financiera' => request()->isMethod('put') ? 'nullable|file|mimetypes:application/pdf,application/msword' : 'required|file|mimetypes:application/pdf,application/msword',
             'soporte' => 'required',
             'asesoramiento_ubi' => 'required',
             'diseno_tienda' => 'required',
@@ -61,9 +61,9 @@ class FranquiciaRequest extends FormRequest
             'gestion' => 'required',
             'tecnologia' => 'required',
             'numero_contacto_1' => 'required',
-            'numero_contacto_2' => '',
+            'numero_contacto_2' => 'required',
             'email_1' => 'required',
-            'email_2' => '',
+            'email_2' => 'required',
 
         ];
     }
