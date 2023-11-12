@@ -1,7 +1,13 @@
-
 @extends('layouts.base')
+<script src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>   
 @section('styles')
- 
+    <script src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>   
+    <script src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>    
+    <link rel="stylesheet" href="{{ asset('css/owlcarousel/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owlcarousel/owl.theme.default.min.css') }}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link rel="stylesheet" href="{{asset('css/login/css/login.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/base/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/base/css/font-awesome.css') }}">
@@ -14,6 +20,13 @@
     <link rel="stylesheet" href="{{asset('css/base/css/all.min.css')}}">
     <link rel="stylesheet" href="{{ asset('css/base/css/slick.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/base/css/slick-theme.css') }}">
+    <!-- Libraries Stylesheet -->
+    <link href="{{ asset('css/base/css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/base/css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/base/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ asset('css/base/css/style_style.css') }}" rel="stylesheet">
 
 @endsection
 
@@ -26,7 +39,7 @@
                 <div class="col-lg-4">
                     <div class="left-content">
                         <div class="inner-content">
-                            <h4>Franquicias</h4>
+                            <h4>Culinary Finder</h4>
                             <h6>Plataforma para vender o comprar Franquicias</h6>
                             <div class="main-white-button scroll-to-section">
                                 <a href="{{ route('sobre_nosotros.index')}}">Conoce más</a>
@@ -81,7 +94,7 @@
                     <div class="right-content">
                         <div class="thumb">
                             <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
-                            <img src="{{ asset('img/dauroweb-logo.png') }}" alt="Mi Foto">
+                            <img src="{{ asset('img/2.png') }}" alt="Mi Foto">
                         </div>
                     </div>
                 </div> 
@@ -89,94 +102,129 @@
         </div>
     </section>
     <!-- ***** About Area Ends ***** -->
+    <br><br><br><br><br>
+    <!-- Team Start -->
 
-    <!-- ***** Menu Area Starts ***** -->
-    <section class="section" id="menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
+    <div class="container-fluid py-5">
+        <div class="container pt-5">
+            <div class="col-lg-4">
                     <div class="section-heading">
                         <h6>Franquicias</h6>
-                        <h2>Catálogo de franquicias disponibles</h2>
+                        <br>
+                        <br>
                     </div>
-                </div> 
+            </div> 
+            <div class="row justify-content-center text-center">
+
+                <div class="col-lg-6">
+                    <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Las más vendidas</h6>
+                    <h1 class="mb-5">Franquicias disponibles</h1>
+                </div>
             </div>
-        </div>
-        <div class="menu-item-carousel">
-            <div class="col-lg-12">
-                <div class="owl-menu-item owl-carousel">
-                    <div class="item">
-                        <div class='card card1'>
-                            <div class='info'>
-                              <h1 class='title'>Eladio´s Bar</h1>
-                              <p class='description'>Botanas, platillos y bebidas con la mejor atención</p>
-                              <div class="main-text-button">
-                                  <div class="scroll-to-section"><a href="#reservation">Contacto<i class="fa fa-angle-down"></i></a></div>
-                              </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid" src="img/logo1.jpg" alt="">
+                        <div class="position-relative text-center">
+                            <div class="team-text bg-primary text-white">
+                                <h5 class="text-white text-uppercase">Mítica</h5>
+                                <p class="m-0">Hamburguesería fast-casual</p>
+                            </div>
+                            <div class="team-social bg-dark text-center">
+                                <a class="btn btn-outline-primary btn-square mr-2" href="https://www.miticaburgers.com/"><i class="fas fa-home nav-icon"></i></a>
+                                <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/miticagl/"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/miticaburgers/?hl=es"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class='card card2'>
-                            <div class='info'>
-                              <h1 class='title'>Las Adoraditas</h1>
-                              <p class='description'>Las auténticas Adoraditas de Mérida Yucatán</p>
-                              <div class="main-text-button">
-                                  <div class="scroll-to-section"><a href="#reservation">Contacto<i class="fa fa-angle-down"></i></a></div>
-                              </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid" src="img/logo2.png" alt="">
+                        <div class="position-relative text-center">
+                            <div class="team-text bg-primary text-white">
+                                <h5 class="text-white text-uppercase">Eladio´s Bar</h5>
+                                <p class="m-0">Restaurante familiar</p>
+                            </div>
+                            <div class="team-social bg-dark text-center">
+                                <a class="btn btn-outline-primary btn-square mr-2" href="http://www.eladios.com.mx/"><i class="fas fa-home nav-icon"></i></a>
+                                <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/RestEladiosBar/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class='card card3'>
-                            <div class='info'>
-                              <h1 class='title'>Angry Angus</h1>
-                              <p class='description'>Hamburguesas de la más alta calidad con carne 100% de res</p>
-                              <div class="main-text-button">
-                                  <div class="scroll-to-section"><a href="#reservation">Contacto<i class="fa fa-angle-down"></i></a></div>
-                              </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid" src="img/logo3.png" alt="">
+                        <div class="position-relative text-center">
+                            <div class="team-text bg-primary text-white">
+                                <h5 class="text-white text-uppercase">Las Adoraditas</h5>
+                                <p class="m-0">Express Lunch</p>
+                            </div>
+                            <div class="team-social bg-dark text-center">
+                                <a class="btn btn-outline-primary btn-square mr-2" href="https://lasadoraditas.com/"><i class="fas fa-home nav-icon"></i></a>
+                                <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/lasadoraditas/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/lasadoraditasmx/?hl=es"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class='card card4'>
-                            <div class='info'>
-                              <h1 class='title'>Mítica</h1>
-                              <p class='description'>Mítica es un concepto de hamburguesería fast-casual</p>
-                              <div class="main-text-button">
-                                  <div class="scroll-to-section"><a href="#reservation">Contacto<i class="fa fa-angle-down"></i></a></div>
-                              </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid" src="img/logo5.png" alt="">
+                        <div class="position-relative text-center">
+                            <div class="team-text bg-primary text-white">
+                                <h5 class="text-white text-uppercase">El Colon</h5>
+                                <p class="m-0">Heladería</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class='card card5'>
-                            <div class='info'>
-                              <h1 class='title'>El Colon</h1>
-                              <p class='description'>Heladería más famosa con 100 años de antigüedad</p>
-                              <div class="main-text-button">
-                                  <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class='card card3'>
-                            <div class='info'>
-                              <h1 class='title'>Klassic Cake</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-                              <div class="main-text-button">
-                                  <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-                              </div>
+                            <div class="team-social bg-dark text-center">
+                                <a class="btn btn-outline-primary btn-square mr-2" href="https://dulceriaysorbeteriacolon.wordpress.com/?fbclid=IwAR04y7Ng83_JrlkCxg7xyWC_6X3ettenhx_g9cJAHp3HN0XqwJJQZ7fwbFU"><i class="fas fa-home nav-icon"></i></a>
+                                <a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/SorbeteriaColon/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </section>
-    <!-- ***** Menu Area Ends ***** -->
-    
+    <!-- Team End -->
+    <!-- Pricing Start -->
+    <div class="container-fluid bg-pricing" style="margin: 90px 0; background-image: url('img/slide-03-modi.png'); background-size: cover; background-position: center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="img/pago.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7 pt-5 pb-lg-5">
+                    <div class="pricing-text bg-light p-4 p-lg-5 my-lg-5">
+                        <div>
+                            <div class="bg-white">
+                                <div class="d-flex align-items-center justify-content-between border-bottom border-primary p-4">
+                                    <h1 class="display-4 mb-0">
+                                        <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>199<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/MXN</small>
+                                    </h1>
+                                    <h5 class="text-uppercase m-0" style="color: #ff6557;"  style="color: #ff6557;">Suscripción mensual</h5>
+                                </div>
+                                <div class="p-4">
+                                    <p><i class="fa fa-check text-success mr-2"></i>Publicar Franquicias</p>
+                                    <p><i class="fa fa-check text-success mr-2"></i>Acceder a Información de contacto</p>
+                                    <p><i class="fa fa-check text-success mr-2"></i>Administrar comentarios de franquicias publicadas</p>
+                                    <p><i class="fa fa-check text-success mr-2"></i>Gestión de información sobre tus franquicias</p>
+                                    <a href="{{route('register')}}" class="btn btn-primary my-2">Obtener suscripción</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing End -->       
     <!-- ***** Chefs Area Starts ***** -->
     <section class="section" id="chefs">
         <div class="container">
@@ -242,48 +290,17 @@
         </div>
     </section>
     <!-- ***** Chefs Area Ends ***** -->
-    <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
+    
   </div>
 </div>
 
 @endsection
-<script src="{{ asset('js/custom.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+<script src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>      
 
+<script src="{{ asset('owlcarousel/owl.carousel.min.js')}}"></script>  
+<script src="{{ asset('js/custom.js')}}"></script>
+<script src="{{ asset('js/owl.carousel.min.js')}}"></script>
 <script src="{{ asset('js/owl-carousel.js')}}"></script>
 <script src="{{ asset('js/accordions.js')}}"></script>
 <script src="{{ asset('js/datepicker.js')}}"></script>
@@ -296,7 +313,7 @@
 <script src="{{ asset('js/isotope.js')}}"></script> 
 
 <!-- script franquicia -->
-<script src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>         
+    
 <script src="{{ asset('js/jquery.singlePageNav.min.js')}}"></script>  
 <script src="{{ asset('js/parallax.min.js')}}"></script>    
 <script src="{{ asset('js/imagesloaded.pkgd.min.js')}}"></script>     
@@ -305,6 +322,8 @@
 <script src="{{ asset('js/slick.min.js')}}"></script>             
 <script src="{{ asset('js/templatemo-script.js')}}"></script>
 
+
+<script src="{{ asset('js/app.js')}}"></script>  
 <!--
 <div class="container">
     <div class="row justify-content-center">

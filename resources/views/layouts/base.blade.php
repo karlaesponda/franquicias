@@ -9,10 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
-     
+    
+    <script src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>    
+    <link rel="stylesheet" href="{{ asset('css/owlcarousel/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owlcarousel/owl.theme.default.min.css') }}">
 
     <!-- jQuery -->
-    <script src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
 
     <!-- Scripts de bootstrap -->
     <script src="{{asset('js/app.js')}}"></script>
@@ -27,6 +30,8 @@
     <link href="{{ asset('css/base/css/menu.css') }}" rel="stylesheet">
     <link href="{{ asset('css/base/css/footer.css') }}" rel="stylesheet">-->
    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <!-- Estilos de mi front-end -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/base/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/base/css/font-awesome.css') }}">
@@ -41,29 +46,7 @@
     <link rel="stylesheet" href="{{asset('css/base/css/all.min.css')}}">
     <link rel="stylesheet" href="{{ asset('css/base/css/slick.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/base/css/slick-theme.css') }}">
-<!-- Plugins -->
-    <script src="{{ asset('js/custom.js')}}"></script>
 
-    <script src="{{ asset('js/owl-carousel.js')}}"></script>
-    <script src="{{ asset('js/accordions.js')}}"></script>
-    <script src="{{ asset('js/datepicker.js')}}"></script>
-    <script src="{{ asset('js/scrollreveal.min.js')}}"></script>
-    <script src="{{ asset('js/waypoints.min.js')}}"></script>
-    <script src="{{ asset('js/jquery.counterup.min.js')}}"></script>
-    <script src="{{ asset('js/imgfix.min.js')}}"></script> 
-    <script src="{{ asset('js/slick.js')}}"></script> 
-    <script src="{{ asset('js/lightbox.js')}}"></script> 
-    <script src="{{ asset('js/isotope.js')}}"></script> 
-    
-    <!-- script franquicia -->
-    <script src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>         
-    <script src="{{ asset('js/jquery.singlePageNav.min.js')}}"></script>  
-    <script src="{{ asset('js/parallax.min.js')}}"></script>    
-    <script src="{{ asset('js/imagesloaded.pkgd.min.js')}}"></script>     
-    <script src="{{ asset('js/isotope.pkgd.min.js')}}"></script>          
-    <script src="{{ asset('js/jquery.magnific-popup.min.js')}}"></script> 
-    <script src="{{ asset('js/slick.min.js')}}"></script>             
-    <script src="{{ asset('js/templatemo-script.js')}}"></script>
 
 <!-- Global Init -->
 
@@ -84,6 +67,7 @@
         });
 
     </script>   
+
 
 
     <!-- Estilos cambiantes -->
@@ -129,7 +113,32 @@
         <!-- Incluir footer -->
         @include('layouts.footer')
     </div>
+<!-- Plugins -->
+<script src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>   
 
+<script src="{{ asset('owlcarousel/owl.carousel.min.js')}}"></script>  
+<script src="{{ asset('js/custom.js')}}"></script>
+<script src="{{ asset('js/owl.carousel.min.js')}}"></script>
+<script src="{{ asset('js/owl-carousel.js')}}"></script>
+<script src="{{ asset('js/accordions.js')}}"></script>
+<script src="{{ asset('js/datepicker.js')}}"></script>
+<script src="{{ asset('js/scrollreveal.min.js')}}"></script>
+<script src="{{ asset('js/waypoints.min.js')}}"></script>
+<script src="{{ asset('js/jquery.counterup.min.js')}}"></script>
+<script src="{{ asset('js/imgfix.min.js')}}"></script> 
+<script src="{{ asset('js/slick.js')}}"></script> 
+<script src="{{ asset('js/lightbox.js')}}"></script> 
+<script src="{{ asset('js/isotope.js')}}"></script> 
+
+<!-- script franquicia -->
+    
+<script src="{{ asset('js/jquery.singlePageNav.min.js')}}"></script>  
+<script src="{{ asset('js/parallax.min.js')}}"></script>    
+<script src="{{ asset('js/imagesloaded.pkgd.min.js')}}"></script>     
+<script src="{{ asset('js/isotope.pkgd.min.js')}}"></script>          
+<script src="{{ asset('js/jquery.magnific-popup.min.js')}}"></script> 
+<script src="{{ asset('js/slick.min.js')}}"></script>             
+<script src="{{ asset('js/templatemo-script.js')}}"></script>
  
 </body>
 

@@ -1,9 +1,10 @@
 <!-- ***** Header Area Start ***** -->
+
 <header class="header-area header-sticky fixed-top">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <nav class="main-nav">
+                <nav class="main-nav" id="navbarCollapse">
                     <!-- ***** Logo Start ***** -->
                     <a href="home.html" class="logo">
                     <img src="{{ asset('img/2.png') }}" alt="Mi Foto">

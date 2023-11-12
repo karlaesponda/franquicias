@@ -654,6 +654,7 @@ banner
 #top .col-lg-4,
 #top .col-lg-8 {
   padding: 0px;
+  
 }
 
 #top .left-content {
@@ -923,19 +924,19 @@ menu
 }
 
 .card1 {
-  background-image: url(../images/franquicia1.png);
+  background-image: url(../img/logo1.png);
 }
 .card2 {
-  background-image: url(../images/franquicia2.png);
+  background-image: url(../img/logo2.png);
 }
 .card3 {
-  background-image: url(../images/franquicia3.png);
+  background-image: url(../img/logo3.png);
 }
 .card4 {
-  background-image: url(../images/franquicia4.png);
+  background-image: url(../img/logo4.png);
 }
 .card5 {
-  background-image: url(../images/franquicia5.png);
+  background-image: url(../img/logo5.png);
 }
 
 .info {
@@ -1469,7 +1470,7 @@ footer
 
 footer {
   margin-top: 60px;
-  padding: 50px 0px;
+  padding: 0px 0px;
   background-color: #fb5849;
 }
 
