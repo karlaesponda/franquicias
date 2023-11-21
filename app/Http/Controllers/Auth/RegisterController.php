@@ -75,8 +75,13 @@ class RegisterController extends Controller
         // Crea un nuevo usuario
         $user = User::create([
             'name' => $data['name'],
+            'username' => $data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'direccion' => $data['direccion'],
+            'cp' => $data['cp'],
+            'telefono' => $data['telefono'],
+            
         ]);
 
         // Asigna el rol con el ID 2 al usuario recién creado
