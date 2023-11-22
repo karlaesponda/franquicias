@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
             'email' => 'kalejandra.kaec@hotmail.com',
             'password' => Hash::make('12345'), // Cambia 'password' por la contraseña que desees para los usuarios de prueba
             'direccion' => 'calle 21 A por 56 y 58',
-            'CP' => '97314',
+            'cp' => '97314',
             'telefono' => '9931175965',
         ])->assignRole('Author');
         //->assignRole('Author')
@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
             'email' => 'waldorf@gmail.com',
             'password' => Hash::make('12345'), // Cambia 'password' por la contraseña que desees para los usuarios de prueba
             'direccion' => 'upper east side',
-            'CP' => '97314',
+            'cp' => '97314',
             'telefono' => '9931175965',
         ])->assignRole('Administrator');
         //
